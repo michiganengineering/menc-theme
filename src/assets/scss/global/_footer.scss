@@ -1,262 +1,157 @@
-//Footer
-// -----
-.footer {
-  background: url(../img/background-pattern-footer.png) center bottom no-repeat fixed;
-  background-size: cover;
-  font-family: 'Open Sans';
-  color: $white;
-  @include breakpoint(small only) {
-    border-top: 1px solid $lighter-gray;
-    .row {
-      &.row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
-  }
-  a {
+//Footer 
+// ----------------
+footer {
+    background: url(../img/background-pattern-footer.png) center bottom no-repeat fixed;
+    background-size: cover;
+    font-family: 'Open Sans';
     color: $white;
-    &:hover {
-      color: $michigan-maize;
+    .columns {
+        @include breakpoint(small only) {
+            margin-bottom: 1rem;
+        }
     }
-    &:focus {
-      color: $michigan-maize;
-    }
-  } // optional magazine row
-  .magazine {
-    padding: 5rem 0;
-    @include breakpoint(small only) {
-      border-bottom: 1px solid $lighter-gray;
+    a.logo {
+        img {
+            width: 100%;
+        }
     }
     a {
-      color: $white;
-      &:hover {
-        color: $michigan-maize;
-      }
-      img {
-        transition: all .2s ease-in-out;
-        opacity: .8;
-        &:hover {
-          box-shadow: 0px 0px 21px -1px rgba(255, 255, 255, 0.25);
-          opacity: 1;
-        }
-      }
-    }
-    .section_title {
-      margin-bottom: 1rem;
-      p {
-        font-family: 'Open Sans';
-        font-size: 1.125rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        margin: 0;
-        line-height: 1;
-        letter-spacing: .05rem;
-        span {
-          letter-spacing: normal;
-        }
-      }
-    }
-    .mag_title {
-      font-family: 'Open Sans';
-      font-size: .9rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-top: 1rem;
-    }
-  }
-  ul {
-    margin-left: 0;
-  }
-  .section_title {
-    font-family: 'bebas_neue_regular';
-    font-size: 1.65rem;
-    line-height: 1;
-    font-weight: normal;
-    @include breakpoint(medium down) {
-      font-size: 1.1rem;
-    }
-  }
-  p {
-    margin: 0;
-    font-size: .85rem;
-    color: $white;
-    @include breakpoint(medium down) {
-      font-size: .8rem;
-    }
-  }
-  .logo-cell {
-    padding: 1.5rem 2rem 2rem;
-    border-top: 1px solid $lighter-gray;
-    border-bottom: 1px solid $lighter-gray;
-    .logo {
-      img {
-        width: 100%;
-        opacity: .9;
-        transition: opacity .2s ease-in-out;
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
-    @include breakpoint(small only) {
-      padding: 1.5rem .5rem .5rem;
-      border: 0;
-    }
-  }
-  .footer-text {
-    padding: 1.5rem 0 1.5rem 1.25rem;
-    border-left: 1px solid rgba($white, .4);
-    border-top: 1px solid $lighter-gray;
-    border-bottom: 1px solid $lighter-gray;
-    @include breakpoint(small only) {
-      border: 0;
-      padding: 1.5rem 0;
-    }
-    .michigan-engineering-container {
-      @include breakpoint(small only) {
-        margin-bottom: 1.5rem;
-      }
-      .section_title {
-        margin-bottom: .5rem;
-      }
-    }
-    .menu-college-of-engineering-container {
-      .menu-item-object-custom {
-        list-style-type: none;
-        a {
-          font-family: 'bebas_neue_regular';
-          font-size: 1.65rem;
-          color: $white;
-          line-height: 1;
-          margin-bottom: .5rem;
-          padding: 0;
-          @include breakpoint(medium down) {
-            font-size: 1.1rem;
-          }
-        }
-        .sub-menu {
-          li {
-            margin: 0;
-            line-height: 1;
-            a {
-              font-family: 'Open Sans';
-              font-size: .85rem;
-              color: $white;
-              margin-bottom: 0;
-              line-height: 1.6;
-              &:hover {
-                color: $michigan-maize;
-              }
-              &:focus {
-                color: $michigan-maize;
-              }
-            }
-          }
-        }
-      }
-      @include breakpoint(small only) {
-        margin-bottom: 1.5rem;
-      }
-    }
-    .follow-us-container {
-      .section_title {
-        margin-bottom: .5rem;
-      }
-      @include breakpoint(small only) {
-        margin-bottom: 1.5rem;
-      }
-    }
-    .extra {
-      @include breakpoint(medium down) {
-        margin-left: 1rem;
-      }
-      @include breakpoint(small only) {
-        margin-bottom: 1.5rem;
-      }
-      .app {
         color: $white;
-        p {
-          transition: all .2s ease-in-out;
-          padding-right: 0;
+        &:hover {
+            color: $michigan-maize;
         }
-        svg {
-          margin-top: .75rem;
-          transform: rotate(9deg);
-          opacity: .85;
-          transition: all .2s ease-in-out;
-          overflow: visible;
+        &:focus {
+            color: $michigan-maize;
         }
-        path.circle {
-          fill: $michigan-maize;
-          transform-origin: 50% 50%;
+    }
+    h6 {
+        font-family: 'bebas_neue_regular';
+        font-size: 1.65rem;
+        line-height: 1;
+        font-weight: normal;
+        @include breakpoint(medium down) {
+            font-size: 1.1rem;
+        }
+    }
+    p {
+        margin: 0;
+        font-size: .85rem;
+        @include breakpoint(medium down) {
+            font-size: .8rem;
         }
         a {
-          &:hover svg {
-            opacity: 1;
-          }
-          &:hover path.circle {
-            animation: spin 7s infinite linear;
-          }
-          &:hover p {
-            color: $michigan-maize;
-          }
-          @keyframes spin {
-            to {
-              transform: rotate(360deg);
+            color: $white;
+            &:hover {
+                color: $michigan-maize;
             }
-          }
-          @include breakpoint(medium down) {
+            &:focus {
+                color: $michigan-maize;
+            }
+        }
+    }
+    .one-cool-thing-container {
+        @extend .small-6,
+        .medium-6,
+        .large-4,
+        .columns;
+        @include breakpoint(small only) {
+            margin-bottom: 1.5rem;
+        }
+        .app {
+            color: $white;
+            @include breakpoint(small only) {
+                margin-left: 0;
+            }
+            .section_title {
+                font-family: 'bebas_neue_regular';
+                font-size: 1.65rem;
+                line-height: 1;
+                @include breakpoint(medium down) {
+                    font-size: 1.1rem;
+                }
+            }
+            p {
+                transition: all .2s ease-in-out;
+            }
+            svg {
+                transform: rotate(9deg);
+                opacity: .85;
+                transition: all .2s ease-in-out;
+                overflow: visible;
+            }
             path.circle {
-              animation: spin 7s infinite linear;
+                fill: $michigan-maize;
+                transform-origin: 50% 50%;
             }
-          }
+            a {
+                &:hover svg {
+                    opacity: 1;
+                    // transform: rotate(16deg);
+                }
+                &:hover path.circle {
+                    animation: spin 7s infinite linear;
+                }
+                &:hover p {
+                    color: $michigan-maize;
+                }
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
         }
-      }
     }
-  }
-  .legal {
-    padding: $global-padding 0;
-    @include breakpoint(medium down) {
-      font-size: .65rem;
-      padding: $global-padding;
-    }
-    color: $light-gray;
-    ul.menu {
-      list-style-type: none;
-      margin: 0;
-      @extend .simple;
-      li {
-        margin-right: .3125rem;
-        &:after {
-          content: '|';
-          padding-left: .3125rem;
+    .legal {
+        padding: $global-padding 0;
+        @include breakpoint(medium down) {
+            font-size: .65rem;
+            padding: $global-padding;
         }
-        &:last-child::after {
-          content: '';
-          padding-left: 0;
-        }
+        color: $light-gray;
         a {
-          font-size: .75rem;
-          color: $light-gray;
-          font-family: 'Open Sans';
-          padding: 0;
-          display: inline-block;
-          &:hover {
-            color: $michigan-maize;
-          }
-          &:focus {
-            color: $michigan-maize;
-          }
-          @include breakpoint(small only) {
-            display: inline;
-            line-height: 1.6;
-          }
+            font-size: .75rem;
+            color: $light-gray;
+            &:hover {
+                color: $michigan-maize;
+            }
+            &:focus {
+                color: $michigan-maize;
+            }
         }
-      }
-      @include breakpoint(small only) {
-        display: inline-block;
-      }
     }
-  }
+    .logo-cell {
+        padding: 1.5rem 2rem 2rem;
+        border-top: 1px solid $lighter-gray;
+        border-bottom: 1px solid $lighter-gray;
+        @include breakpoint(small only) {
+            padding: 1.5rem .5rem .5rem;
+            border-bottom: 0;
+        }
+    }
+    .footer-text {
+        padding: 1.5rem 0 1.5rem 1.25rem;
+        border-left: 1px solid rgba($white, .4);
+        border-top: 1px solid $lighter-gray;
+        border-bottom: 1px solid $lighter-gray;
+        @include breakpoint(small only) {
+            border: 0;
+        }
+    }
+}
+
+.reveal {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    &.footer {
+        color: $black;
+        padding: $global-padding;
+        background-color: $white-100 !important;
+        h6,
+        p {
+            color: $black;
+        }
+        .close-button {
+            color: $black !important;
+        }
+    }
 }
