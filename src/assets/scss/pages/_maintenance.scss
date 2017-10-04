@@ -1,0 +1,97 @@
+// Main Maintenance Mode
+// ---------------------
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+$terminal-green: #00ff00;
+.maintenance {
+    background: url(../img/background-maintenance.png) center no-repeat fixed;
+    background-size: cover;
+    .page {
+        color: $terminal-green;
+        font-family: 'Source Code Pro', Consolas, Monaco, Courier New, monospace;
+        font-size: 1.2rem;
+        @include breakpoint(small only) {
+            font-size: 1rem;
+        }
+        img {
+            opacity: .7;
+            transition: opacity .2s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .overlay {
+            height: 50vh;
+        }
+        .info {
+            margin-top: 15%;
+            @include breakpoint(medium only) {
+                margin-top: 12%;
+            }
+            @include breakpoint(small only) {
+                margin-top: 10%;
+            }
+            h1 {
+                font-family: 'Source Code Pro', Consolas, Monaco, Courier New, monospace;
+                font-size: 2rem;
+                margin: 0;
+                line-height: 1;
+                @include breakpoint(medium only) {
+                    font-size: 1.5rem;
+                }
+                @include breakpoint(small only) {
+                    font-size: 1.2rem;
+                }
+            }
+            .info-box {
+                padding: 2rem 0;
+                border-top: 1px dashed $terminal-green;
+                border-bottom: 1px dashed $terminal-green;
+            }
+        }
+    }
+    .terminal {
+        background: $black-87;
+        height: 40vmin;
+        width: 65vmin;
+        position: relative;
+        border-radius: 4px;
+        @include breakpoint(small only) {
+            height: 80vmin;
+            width: 100vmin;
+        }
+    }
+    .top {
+        width: 100%;
+        background: $white;
+        display: flex;
+        flex-flow: row;
+        height: 30px;
+        position: relative;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    ul {
+        margin: 0;
+        padding: 0 0 0 4px;
+        display: flex;
+        list-style: none;
+        z-index: 1;
+    }
+    .title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: .75rem;
+        font-weight: bold;
+        color: $dark-gray;
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    li {
+        background: lighten($tappan-red, 20%);
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin: auto 5px;
+    }
+}

@@ -1,0 +1,37 @@
+<!-- search listings row -->
+<div class="category_listing_title row">
+    <div class="large-12 column"><span>Your search for <i class="search_term"></i> returned 54 results</span>
+        <hr>
+    </div>
+</div>
+{{#ifpage 'search_results_filtered'}}
+<section class="filters"><div class="filter_label">Filtered by:</div>
+    <div class="callout" data-closable>
+        Nuclear Engineering and Radiological Sciences
+        <button class="close-button" aria-label="Close alert" type="button" data-close>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="callout" data-closable>
+        Energy and Environment
+        <button class="close-button" aria-label="Close alert" type="button" data-close>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="callout" data-closable>
+        Features
+        <button class="close-button" aria-label="Close alert" type="button" data-close>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="callout" data-closable>
+        Within the last month
+        <button class="close-button" aria-label="Close alert" type="button" data-close>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </button>
+    </div>
+</section>
+{{/ifpage}}
+<section class="category_listings row">
+    <div class="small-12 medium-12 large-12 column">{{#repeat 10}} {{>category--listing_item}} {{/repeat}}</div>
+</section>

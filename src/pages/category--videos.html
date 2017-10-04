@@ -1,0 +1,62 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the parent category page for videos
+tag: Michigan Engineering Videos
+shorttag: Videos
+layout: media
+---
+<div class="category_page videos" id="content">
+    <section class="lead_story">
+        <div class="video_listing_title row">
+            <div class="large-12 column"><span>{{tag}}</span>
+                <hr>
+            </div>
+        </div>
+        <a href="#" class="row">
+            <div class="column video_wrapper">
+                <div class="flex-video widescreen">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IBDszAUa85w" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </a>
+        <div class=" video_listing">
+            {{>category--videos--listing_item}}
+        </div>
+    </section>
+    <section class="video_listing">
+    </section>
+    <section class="video_listing">
+        <div class="video_listing_title row secondary">
+            <div class="large-12 column"><span>Research</span>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            {{#repeat 2}} {{>category--videos--listing_item-2}} {{/repeat}}
+        </div>
+    </section>
+    <section class="video_listing">
+        <div class="video_listing_title row third">
+            <div class="large-12 column"><span>Campus &amp; Community</span>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            {{#repeat 2}} {{>category--videos--listing_item-2}} {{/repeat}}
+        </div>
+    </section>
+    <section class="video_listing">
+        <div class="video_listing_title row fourth">
+            <div class="large-12 column"><span>Features</span>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            {{#repeat 2}} {{>category--videos--listing_item-2}} {{/repeat}}
+        </div>
+    </section>
+    <div class="row align-center">
+        <div class="small-12 medium-5 large-3 column text-center"><a href="https://www.youtube.com/user/michiganengineering" class="button load_more" target="_blank">ALL VIDEOS</a></div>
+    </div>
+</div>
+{{>breadcrumbs--alt}}

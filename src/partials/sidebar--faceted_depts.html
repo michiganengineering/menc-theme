@@ -1,0 +1,18 @@
+<section class="subnav search">
+    <div class="search_title row">
+        <div class="large-12 column"><span>Explore Departments</span>
+            <hr>
+        </div>
+    </div>
+    <div class="listing vertical menu" data-accordion-menu ata-trap-focus="true">
+        <ul>
+            <li><a class="is-active" href="{{root}}search_results_filtered.html">By Department</a>
+                <ul class="menu vertical">
+                    {{#each departments}}
+                    <li><a href="{{root}}category--department.html">{{ this }}</a></li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>

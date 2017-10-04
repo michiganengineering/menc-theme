@@ -1,0 +1,32 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the Featured Topic Page
+tag: Flint Water Crisis
+shorttag: Flint Water Crisis
+---
+<div class="category_page" id="content">
+    <section class="featured_topic_led light-blue" id="topic">
+        <!-- available light_blue dark_gray black red yellow orange green -->
+        <div class="row">{{>breadcrumbs}}
+            <div class="column small-12 medium-6 large-7"><div class="flex-video widescreen">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kTPH_LIwoOk?showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+                </div></div>
+            <div class="column small-12 medium-6 large-5 featured_topic_led_graf">
+                <h3>Continuing Coverage: {{tag}}</h3>
+                <p>Flint&rsquo;s drinking water was contaminated with lead after the city switched sources from Lake Huron to the Flint River as a way to save money in 2014. Water quality researchers at Michigan Engineering and the university are concerned about several long-term aspects of the Flint drinking water crisis and are offering their expertise and insight on the unfolding situation. We will add to this page as the coverage continues. <em>(Other background color options: light blue, dark gray, black, red, yellow, orange, and green).</em></p>
+                <div class="social_share column text-right"><span class="share_label">SHARE:</span><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></div>
+            </div>
+        </div>
+    </section>
+    {{>category--lead_row-featured}}
+    <section class="row align-justify">
+        <div class="small-12 medium-8 large-9 columns left_rail">
+            <div class="large-11">{{>category--listings}}
+            </div>
+            <div class="column">{{>pagination}}</div>
+        </div>
+        <div class="small-12 medium-4 large-3 columns right_rail">
+            {{>sidebar--in_the_news}} {{>sidebar--top_faculty}}
+        </div>
+    </section>
+</div>

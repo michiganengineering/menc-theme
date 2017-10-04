@@ -1,0 +1,49 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the subscription page
+tag: The Michigan Engineer Magazine Subscription
+shorttag: Subscribe
+---
+<div class="page subscribe" id="content">
+    <div class="row">{{>breadcrumbs}}
+        <h2 class="header column small-12">{{shorttag}}</h2></div>
+    <section class="row">
+        <div class="small-12 medium-7 large-9 columns left_rail">
+            <div class="large-9">
+                <p class="form_header">Subscribe to the Michigan Engineering's Newsletter</p>
+                <form action="" method="">
+                    <label>First Name
+                        <input type="text">
+                    </label>
+                    <label>Last Name
+                        <input type="text">
+                    </label>
+                    <label>Email
+                        <input type="email" name="email" id="email" value="">
+                    </label>
+                    <fieldset>
+                        <button class="button" type="submit" value="Submit">Submit</button>
+                    </fieldset>
+                </form>
+                <p class="form_header">Subscribe to the Michigan Engineering's RSS Feed</p>
+                <p><a href="#"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a></p>
+                <p class="form_header">Follow Us on Social</p>
+                <div class="row social_row">
+                    <div class="column small-3"><a class="facebook menu_icon" href="http://www.facebook.com/michigan.engineering"><i class="fa fa-facebook fa-2x"></i></a></div>
+                    <div class="column small-3"><a class="twitter menu_icon" href="https://twitter.com/UMengineering"><i class="fa fa-twitter fa-2x"></i></a></div>
+                    <div class="column small-3"><a class="instagram menu_icon" href="https://www.instagram.com/michiganengineering/"><i class="fa fa-instagram fa-2x"></i></a></div>
+                    <div class="column small-3 end"><a class="youtube menu_icon" href="https://www.youtube.com/user/michiganengineering"><i class="fa fa-youtube fa-2x"></i></a></div>
+                </div>
+                <div class="row">
+                    <div class="column small-3"><a class="snapchat-ghost menu_icon" href="http://www.facebook.com/michigan.engineering"><i class="fa fa-snapchat-ghost fa-2x"></i></a></div>
+                    <div class="column small-3"><a class="tumblr menu_icon" href="https://twitter.com/UMengineering"><i class="fa fa-tumblr fa-2x"></i></a></div>
+                    <div class="column small-3"><a class="linkedin menu_icon" href="https://www.instagram.com/michiganengineering/"><i class="fa fa-linkedin fa-2x"></i></a></div>
+                    <div class="column small-3 end"><a class="pinterest menu_icon" href="https://www.youtube.com/user/michiganengineering"><i class="fa fa-pinterest fa-2x"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="medium-5 large-3 columns right_rail">
+            {{>sidebar--top_stories}} {{>sidebar--impact}}
+        </div>
+    </section>
+</div>

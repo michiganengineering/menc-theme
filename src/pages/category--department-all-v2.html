@@ -1,0 +1,29 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the parent category page
+tag: News by department
+shorttag: Department
+research: Research
+---
+<div class="category_page" id="content">
+    <div class="row">{{>breadcrumbs}}</div>
+    <div class="row medium-collapse large-collapse page_head">
+        <h2 class="category_header small-12 large-4 column">{{tag}}</h2>
+        <div class="column small-12 large-4">
+            <ul class="dropdown menu department_menu" data-dropdown-menu data-closing-time="1000">
+                <li><a class="title">Explore Departments</a>
+                    <ul class="menu">
+                        {{#each departments}}
+                        <li><a href="{{root}}category--department.html">{{ this }}</a></li>
+                        {{/each}}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="row align-justify">
+        <div class="small-12 medium-12 large-12 columns">
+            {{>category--department_listings-v2}}
+        </div>
+    </section>
+</div>

@@ -1,0 +1,94 @@
+// Apply outline styles only when input method is keyboard
+// remove :focus style via What Input using progressive enhancement
+// so :focus isn't left broken if JavaScript fails
+[data-whatinput="mouse"] a:focus,
+[data-whatinput="touch"] a:focus {
+  outline: none;
+}
+
+a {
+  transition: color .2s ease-in-out;
+}
+
+// Social Icons
+// ------------
+.fa-facebook {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $facebook;
+  }
+}
+
+.fa-twitter {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $twitter;
+  }
+}
+
+.fa-instagram {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $instagram;
+  }
+}
+
+.fa-youtube {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $youtube;
+  }
+}
+
+.fa-snapchat-ghost {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $snapchat;
+  }
+}
+
+.fa-tumblr {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $tumblr;
+  }
+}
+
+.fa-linkedin {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $linkedin;
+  }
+}
+
+.fa-pinterest {
+  transition: all .1s ease-in-out;
+  &:hover {
+    color: $pinterest;
+  }
+}
+
+a[target="_blank"] {
+  .hed:after,
+  .article_hed:after {
+    font-family: 'FontAwesome';
+    content: '\f08e';
+    font-size: .75rem;
+    color: inherit;
+    padding-left: 4px;
+  }
+}
+
+.entry-content {
+  a {
+    &[target="_blank"]:after,
+    &.external-link:after {
+      font-family: 'FontAwesome';
+      content: '\f08e';
+      font-size: .75rem;
+      color: inherit;
+      padding-left: 4px;
+      text-decoration: none;
+    }
+  }
+}

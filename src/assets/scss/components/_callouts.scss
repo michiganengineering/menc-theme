@@ -1,0 +1,482 @@
+.article_content {
+  .callout {
+    text-shadow: none;
+    margin: 0 0 1.5rem 0;
+    p {
+      margin: 0;
+      width: 100% !important;
+    }
+    .main_hed,
+    .hed {
+      font-family: 'bebas_neuebold';
+      line-height: 1;
+      font-size: 2.5rem;
+    }
+    .main_hed {
+      letter-spacing: .078125rem;
+    }
+    p.caption {
+      background-color: $darker-gray;
+      font-family: "Open Sans";
+      font-size: .65rem;
+      padding: .5rem 1rem !important;
+      color: $light-gray;
+    }
+    &.funfact {
+      padding: 0;
+      border: 0;
+      p {
+        padding-left: $global-padding;
+        padding-right: $global-padding;
+      }
+      .hed {
+        font-family: 'Open Sans';
+        font-weight: 900;
+        line-height: 1;
+        font-size: 2.5rem;
+        padding-top: $global-padding;
+        padding-left: $global-padding;
+        padding-right: $global-padding;
+      }
+      &.white {
+        border: 1px solid $medium-gray;
+      }
+      &.black {
+        background-color: $black-100;
+      }
+      &.gray {
+        color: $black;
+        background-color: $medium-gray;
+        border: 0;
+      }
+    }
+    &.black {
+      background-color: $black-87;
+      border: 0;
+      color: $white;
+    }
+    &.blue {
+      background-color: $michigan-blue;
+      color: $white;
+    }
+    &.light-blue {
+      background-color: $arboretum-blue;
+      border: 0;
+      color: $white;
+    }
+    &.gray {
+      background-color: $darker-gray;
+      color: $white-100;
+      border: 1px solid $black-87;
+    }
+    &.light-gray {
+      background-color: $lightest-gray;
+      color: $black-87;
+      border: 1px solid darken($lightest-gray, 5%);
+    }
+    &.yellow {
+      background-color: $michigan-maize;
+      color: $black-87;
+      border: 1px solid darken($michigan-maize, 5%);
+      .main_hed,
+      .stat,
+      .dek {
+        color: $black;
+      }
+    }
+    &.red {
+      background-color: $tappan-red;
+      color: $white-100;
+      border: 1px solid darken($tappan-red, 11%);
+    }
+    &.related {
+      font-family: 'Open Sans';
+      font-weight: 600;
+      background-color: $lightest-gray;
+      color: $black-87;
+      border: 1px solid darken($lightest-gray, 5%);
+      .main_hed {
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: normal;
+      }
+      .row {
+        .column {
+          margin-top: .75rem;
+          margin-bottom: 0;
+          line-height: 1.5;
+          a {
+            font-size: 1rem;
+            color: $black;
+            &:hover {
+              color: $arboretum-blue;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      &.img_float_right {
+        width: 45%;
+        float: right;
+        margin: 1rem 0 1rem 1.5rem;
+        @include breakpoint(small only) {
+          float: none;
+          width: 100%;
+          margin: 0 0 1.5rem 0;
+        }
+      }
+      &.img_float_left {
+        width: 45%;
+        float: left;
+        margin: 1rem 1rem 1.5rem 0;
+        @include breakpoint(small only) {
+          float: none;
+          width: 100%;
+          margin: 0 0 1.5rem 0;
+        }
+      }
+      &.gray {
+        a {
+          color: $white-87;
+          &:hover {
+            color: $arboretum-blue;
+          }
+        }
+      }
+      &.black {
+        a {
+          color: $white-87;
+          &:hover {
+            color: $arboretum-blue;
+          }
+        }
+      }
+    }
+    &.contact {
+      padding: 0;
+      @include breakpoint(small only) {
+        padding-bottom: 1.25rem;
+      }
+      border: 0;
+      .contact_img {
+        margin-right: 1.2rem;
+        img {
+          width: 100%;
+          @include breakpoint(small only) {
+            border-radius: 150px;
+          }
+        }
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .contact_details {
+        border-left: 5px solid $michigan-maize;
+        padding-left: 1rem;
+        .author {
+          font-weight: 700;
+          font-size: 1.85rem;
+          @include breakpoint(small only) {
+            font-size: 1.1rem;
+          }
+        }
+        .title {
+          font-weight: 300;
+        }
+        padding: 0;
+        p {
+          color: $black;
+          padding: 0 1rem;
+          font-family: 'Open Sans';
+          font-size: .9rem;
+          margin-bottom: .9rem;
+          line-height: 1.25;
+          @include breakpoint(small only) {
+            font-size: .75rem;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          a {
+            color: $black;
+            text-decoration: underline;
+            &:hover {
+              color: $arboretum-blue;
+            }
+          }
+        }
+        .main_hed {
+          color: $dark-gray;
+          font-weight: 900;
+          font-size: 1.2rem;
+          letter-spacing: normal;
+          margin-bottom: .75rem;
+          line-height: 1;
+          @include breakpoint(small only) {
+            font-size: .95rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    &.full {
+      .hed {
+        padding: 0 1rem;
+        margin-top: 1rem;
+      }
+      .dek {
+        padding: 0 1rem;
+        margin-bottom: 0;
+      }
+      &.three_col {
+        background-color: $michigan-blue;
+        border: 1px solid darken($michigan-blue, 5%);
+        .main_hed {
+          color: $white;
+          @include breakpoint(small only) {
+            font-size: 1.75rem;
+          }
+        }
+        .stat {
+          font-family: 'bebas_neue_regular';
+          font-size: 7.75rem;
+          color: $michigan-maize;
+          margin-bottom: 0;
+          line-height: 1;
+          @include breakpoint(small only) {
+            font-size: 2.75rem;
+          }
+        }
+        .dek {
+          font-weight: 400;
+          color: $white;
+          @include breakpoint(small only) {
+            padding: 0;
+            font-size: .85rem;
+            line-height: 1.1;
+          }
+        }
+        &.yellow {
+          background-color: $michigan-maize;
+          border: 1px solid darken($michigan-maize, 10%);
+          .main_hed,
+          .stat,
+          .dek {
+            color: $white;
+          }
+        }
+        &.red {
+          background-color: $tappan-red;
+          color: $white-100;
+          border: 1px solid darken($tappan-red, 11%);
+        }
+        &.light-blue {
+          background-color: $arboretum-blue;
+          color: $white-100;
+          border: 1px solid darken($arboretum-blue, 6%);
+          &.two_col {
+            .text-left {
+              margin-top: 1.5rem;
+              font-size: 1rem;
+            }
+            .text {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+        &.black {
+          background-color: $black;
+          color: $white-100;
+          border: 1px solid $black-100;
+        }
+        &.green {
+          background-color: $taubman-teal;
+          color: $black-100;
+          border: 1px solid darken($taubman-teal, 5%);
+        }
+        &.gray {
+          color: $white;
+          background-color: $medium-gray;
+          border: 0;
+          .main_hed,
+          .stat,
+          .dek {
+            color: $black;
+          }
+        }
+      }
+      &.two_col {
+        padding-bottom: 0;
+        .hed {
+          padding: 0;
+          @include breakpoint(small only) {
+            padding: 0 1rem;
+          }
+        }
+        .dek {
+          padding: 0;
+          @include breakpoint(small only) {
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+    &.impact {
+      &.blue {
+        background-color: $michigan-blue;
+        color: $white-100;
+        border: 1px solid $black-87;
+        &.two_col {
+          .support {
+            .text-left {
+              margin-top: 1.5rem;
+            }
+          }
+        }
+      }
+      &.light-blue {
+        background-color: $arboretum-blue;
+        color: $white-100;
+        border: 1px solid darken($arboretum-blue, 6%);
+        &.two_col {
+          .text-left {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+          }
+          .text {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      &.yellow {
+        background-color: $michigan-maize;
+        color: $black-87;
+        border: 1px solid darken($michigan-maize, 5%);
+        .icons {
+          a {
+            color: $black-87;
+            &:hover {
+              color: $a2-amethyst;
+            }
+            hr {
+              border-color: $black-87;
+            }
+            &:hover hr {
+              border-color: $a2-amethyst;
+            }
+          }
+        }
+      }
+      &.black {
+        background-color: $black;
+        color: $white-100;
+        border: 1px solid $black-100;
+      }
+      &.green {
+        background-color: $taubman-teal;
+        color: $black-100;
+        border: 1px solid darken($taubman-teal, 5%);
+        .icons {
+          a {
+            color: $black-100;
+            &:hover {
+              color: $tappan-red;
+            }
+            hr {
+              border-color: $black-87;
+            }
+            &:hover hr {
+              border-color: $tappan-red;
+            }
+          }
+        }
+      }
+      &.white {
+        .icons {
+          a {
+            color: $black-100;
+            &:hover {
+              color: $arboretum-blue;
+            }
+            hr {
+              border-color: $black-87;
+            }
+            &:hover hr {
+              border-color: $arboretum-blue;
+            }
+          }
+        }
+      }
+      &.red {
+        background-color: $tappan-red;
+        color: $white-100;
+        border: 1px solid darken($tappan-red, 11%);
+        &.three_col {
+          .icons {
+            padding: inherit;
+            margin-top: 1.5rem;
+            .text-left {
+              margin-top: .75rem;
+            }
+          }
+        }
+      }
+      &.img {
+        img {
+          border-radius: 50%;
+          width: 80%;
+          display: inline-block;
+          margin: 1rem 0;
+          @include breakpoint(small only) {
+            width: 50%;
+          }
+        }
+      }
+      text-shadow: none;
+      font-family: 'Open Sans';
+      p {
+        font-size: 1rem !important;
+        margin-bottom: 0 !important;
+        @include breakpoint(small only) {
+          margin: 1rem 0 !important;
+        }
+      }
+      h5 {
+        font-family: 'bebas_neuebold';
+        font-size: 1.75rem;
+        font-weight: 900;
+      }
+      .icons {
+        a {
+          color: $white;
+          &:hover {
+            color: $michigan-maize;
+          }
+          &:hover hr {
+            border-color: $michigan-maize;
+          }
+          &:after {
+            display: none;
+          }
+          i {
+            font-size: 1.2rem;
+          }
+        }
+        padding: 0 1rem;
+        .text-left {
+          padding-left: 0rem;
+          font-size: .875rem;
+        }
+      }
+      hr {
+        padding: 0 1rem;
+        margin-top: 0;
+        border-color: $white;
+        width: 100%;
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+}

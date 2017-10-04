@@ -1,0 +1,21 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the subparent category page
+tag: Transportation
+shorttag: Transportation
+research: Transportation
+---
+<div class="category_page" id="content">
+    <div class="row page_head">{{>breadcrumbs}} 
+        <h2 class="category_header column large-12">{{tag}}</h2></div> {{>category--lead_row}}
+    <section class="row">
+        <div class="small-12 medium-8 large-9 columns left_rail">
+            <div class="large-11">{{>category--listings}}
+            </div>
+            <div class="column">{{>pagination}}</div>
+        </div>
+        <div class="small-12 medium-4 large-3 columns right_rail">
+            {{>sidebar--in_the_news}}{{>sidebar--top_faculty}} {{>sidebar--newsletter}}
+        </div>
+    </section>
+</div>

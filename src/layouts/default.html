@@ -1,0 +1,248 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!--
+    __  ____      __    _                      ______            _                      _            
+   /  |/  (_)____/ /_  (_)___ _____ _____     / ____/___  ____ _(_)___  ___  ___  _____(_)___  ____ _
+  / /|_/ / / ___/ __ \/ / __ `/ __ `/ __ \   / __/ / __ \/ __ `/ / __ \/ _ \/ _ \/ ___/ / __ \/ __ `/
+ / /  / / / /__/ / / / / /_/ / /_/ / / / /  / /___/ / / / /_/ / / / / /  __/  __/ /  / / / / / /_/ / 
+/_/  /_/_/\___/_/ /_/_/\__, /\__,_/_/ /_/  /_____/_/ /_/\__, /_/_/ /_/\___/\___/_/  /_/_/ /_/\__, /  
+                      /____/                           /____/                               /____/   
+-->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{keywords}}">
+    <link rel="author" href="{{author}}" />
+    <link rel="canonical" href="{{page}}" /> {{!-- Facebook Meta --}}
+    <meta property="og:url" content="{{page}}">
+    <meta property="og:image" content="{{root}}assets/img/og-img.png">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:site_name" content="{{siteTitle}}">
+    <meta property="og:see_also" content="{{root}}"> {{!-- Google+ Meta --}}
+    <meta itemprop="name" content="{{ title }}">
+    <meta itemprop="description" content="{{ description }}">
+    <meta itemprop="image" content="{{root}}assets/img/og-img.png"> {{!-- Twitter Meta --}}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{page}}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{root}}assets/img/og-img.png"> {{!-- Icons --}}
+    <link rel="icon" href="{{root}}assets/img/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{root}}assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{root}}assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{root}}assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{root}}assets/img/icons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="{{root}}assets/img/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{root}}assets/img/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{root}}assets/img/icons/manifest.json">
+    <link rel="mask-icon" href="{{root}}assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#00274c">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <script src="https://use.fontawesome.com/771dfba98b.js"></script>
+</head>
+
+<body {{#ifpage 'category--features'}} class="features" {{/ifpage}}>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> navigation}} {{> body}} {{> footer}}
+    <div class="scroll-top-wrapper">
+        <span class="scroll-top-inner"><span class="fa-stack fa-lg"><i class="fa fa-2x fa-angle-up fa-inverse"></i><i class="fa fa-circle fa-stack-2x"></i></span></span>
+    </div>
+    <script src="{{root}}assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/jQuery.headroom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.js"></script>
+    <!-- <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script> -->
+    <!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script> -->
+    <script type="text/javascript">
+    // these all might be crazy but that's rapid prototyping lyfe
+    // $('.title-bar').on('sticky.zf.stuckto:top', function() {
+    //     $(this).addClass('shrink');
+    // }).on('sticky.zf.unstuckfrom:top', function() {
+    //     $(this).removeClass('shrink');
+    // });
+
+    $(".video-1, .video-2, .video-3").on("click", function(event) {
+        event.preventDefault();
+        $(".flex-video iframe").prop("src", $(event.currentTarget).attr("href"));
+    });
+    $(".playlist").on('click', '.video_item', function() {
+        // remove classname 'active' from all who already has classname 'active'
+        $(".playlist .video_item.active").removeClass("active");
+        // adding classname 'active' to current click li 
+        $(this).addClass("active");
+    });
+    $(function() {
+        $(document).on('scroll', function() {
+
+            if ($(window).scrollTop() > 100) {
+                $('.scroll-top-wrapper').addClass('show');
+            } else {
+                $('.scroll-top-wrapper').removeClass('show');
+            }
+        });
+
+        $('.scroll-top-wrapper').on('click', scrollToTop);
+    });
+
+    function scrollToTop() {
+        verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+        element = $('body');
+        offset = element.offset();
+        offsetTop = offset.top;
+        $('html, body').animate({
+            scrollTop: offsetTop
+        }, 500, 'swing');
+    };
+    // twitter share
+    ! function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, "script", "twitter-wjs");
+
+
+    // url parser just for fun and the prototype
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return (false);
+    }
+    $('.search_term').html(getQueryVariable("search"));
+    </script>
+    <!-- <script type="text/javascript">
+    $(function() {
+
+        $("#newsletter_flip").flip({
+            trigger: 'manual'
+        });
+        $("#open").click(function() {
+            $("#newsletter_flip").flip(true);
+        });
+        $("#close").click(function() {
+            $("#newsletter_flip").flip(false);
+        });
+    });
+    </script> -->
+    {{#ifpage 'article--standard' 'article--standard_long' 'article--short' 'article--standard-callouts'}}
+    <script>
+    $(document).ready(function() {
+        var $el = $('#bottom');
+        var bottom = $el.position().top + $el.outerHeight(true);
+        var getMax = function() {
+            return $el.position().top + $el.outerHeight(true);
+        }
+
+        var getValue = function() {
+            return $(window).scrollTop();
+        }
+
+        if ('max' in document.createElement('progress')) {
+            // Browser supports progress element
+            var progressBar = $('progress');
+
+            // Set the Max attr for the first time
+            progressBar.attr({
+                max: getMax()
+            });
+
+            $(document).on('scroll', function() {
+                // On scroll only Value attr needs to be calculated
+                progressBar.attr({
+                    value: getValue()
+                });
+            });
+
+            $(window).resize(function() {
+                // On resize, both Max/Value attr needs to be calculated
+                progressBar.attr({
+                    max: getMax(),
+                    value: getValue()
+                });
+            });
+        } else {
+            var progressBar = $('.progress-bar'),
+                max = getMax(),
+                value, width;
+
+            var getWidth = function() {
+                // Calculate width in percentage
+                value = getValue();
+                width = (value / max) * 100;
+                width = width + '%';
+                return width;
+            }
+
+            var setWidth = function() {
+                progressBar.css({
+                    width: getWidth()
+                });
+            }
+
+            $(document).on('scroll', setWidth);
+            $(window).on('resize', function() {
+                // Need to reset the Max attr
+                max = getMax();
+                setWidth();
+            });
+        }
+
+    });
+
+    function sticky_relocate() {
+
+        var window_top = jQuery(this).scrollTop();
+        var div_top = jQuery('#side_sticky').offset().top;
+        var footer_top = jQuery('#bottom').offset().top + (-800);
+
+        if (window_top > div_top) {
+            jQuery('#side_sticky').addClass('fade');
+        } else {
+            jQuery('#side_sticky').removeClass('fade');
+        }
+
+        if (window_top > footer_top) {
+            jQuery('#side_sticky').addClass('fade');
+        }
+
+    }
+
+    jQuery(function() {
+        jQuery(window).scroll(sticky_relocate);
+        sticky_relocate();
+    });
+    $(window).resize(function() {
+        console.log('resize called');
+        var width = $(window).width();
+        if (width >= 320 && width <= 1279) {
+            $('#menu').removeClass('vertical').addClass('expanded');
+        } else {
+            $('#menu').removeClass('expanded').addClass('vertical');
+        }
+    }).resize();
+    $(".headroom").headroom();
+    </script>
+    {{/ifpage}}
+    <script type="text/javascript">
+    $("#navigation").headroom({
+        "offset": 255,
+        "tolerance": 5
+    });
+    </script>
+</body>
+
+</html>

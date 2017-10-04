@@ -1,0 +1,70 @@
+@media print {
+    @page {
+        // the space between the printed
+        // body and the edges of the paper
+        // measured in centimeters
+        margin: 5cm;
+    }
+    body {
+        width: 100%;
+        margin: 0;
+        color: black;
+        orphans: 2;
+        widows: 2;
+    }
+    a {
+        text-decoration: none;
+        background: none;
+    }
+    img {
+        width: 100%;
+    }
+    .lead_row {
+        .lead_article {
+            position: static !important;
+            margin-bottom: 4rem !important;
+            .overlay {
+                position: static !important;
+            }
+        }
+        .secondary_articles {
+            .article {
+                margin-bottom: 4rem !important;
+            }
+        }
+        .secondary_articles,
+        p {
+            page-break-inside: avoid;
+        }
+    }
+    .features {
+        .lead_story {
+            .overlay {
+                position: static !important;
+                margin-bottom: 4rem !important;
+            }
+        }
+    }
+    .content[lang="en"] p,
+    .content[lang="en"] blockquote {
+        -webkit-hyphens: auto;
+        -webkit-hyphenate-limit-before: 2;
+        -webkit-hyphenate-limit-after: 3;
+        -webkit-hyphenate-limit-lines: 2;
+    }
+    // footer-specific
+    .footer {
+        .footer-text {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0;
+            border: 0;
+            .michigan-engineering-container {
+                text-align: left;
+            }
+        }
+        .menu-college-of-engineering-container {
+            display: none;
+        }
+    }
+}

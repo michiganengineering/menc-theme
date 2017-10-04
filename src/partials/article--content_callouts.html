@@ -1,0 +1,46 @@
+<!-- article long_content row with callouts much callouts so call more outs -->
+<section class="content">
+    <div class="article_content row align-justify">
+        <div class="small-12 large-8 columns article left_rail wow fadeIn" data-wow-delay="1s">
+            <h2 class="article_hed">Hurricane-tracking satellite fleet readies for launch</h2>
+            <div class="byline row">
+                <div class="column shrink"><span class="float-left author">by Nicole Casal Moore</span></div>
+                <div class="column shrink"><span class="date">Sep. 21, 2016</span></div>
+            </div>
+            <div class="subhed">The CYGNSS mission is expected to lead to more accurate weather forecasts of wind speeds and storm surges—the swells of water that do the most damage when hurricanes make landfall. | <span class="time_label">Short read</span></div>
+            <div class="content_wide_img">
+                <a data-open="img01"><span class="arrow_container"><i class="fa fa-clone" aria-hidden="true"></i><span class="gallery_label">Embiggen</span></span>
+                <img src="{{root}}assets/img/deploy-cygnss.gif" width="100%" alt="Placeholder" /></a>
+                <div class="row caption_container align-justify">
+                    <div class="caption small-7 column">Animation: NASA</div>
+                    <div class="social_share column text-right"><span class="share_label">SHARE:</span><a href="#fracebrook"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#tritter"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#printarrest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+            <p class="wow fadeIn dropcap" data-wow-delay=".01s">Launch is fast approaching for a $151 million, University of Michigan-led NASA satellite mission that will help improve forecasts of hurricane track, intensity and storm surge.The Cyclone Global Navigation Satellite System hurricane mission is scheduled to launch Dec. 12 from Cape Canaveral Air Force Station in Florida. It will measure previously unknown details that are crucial to understanding the formation and intensity of tropical cyclones and hurricanes.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;The robot has no feeling in her tiny feet, but she senses the angles of her joints—for instance, her knee angles, hip angles and the rotation angle of her torso,&rdquo; said Jessy Grizzle, professor of electrical engineering and computer science and of mechanical engineering. &ldquo;It&rsquo;s like walking blindfolded and on stilts.&rdquo;</p>
+            {{>callout--impact}}
+            <p class="wow fadeIn" data-wow-delay=".01s">MARLO is Grizzle&rsquo;s first robot that can walk (and fall) in any direction, known as 3D walking. With their previous robot, MABEL, Grizzle&rsquo;s team produced leading control algorithms for robots that need to move in only two dimensions. MABEL was attached to a boom that gave her sideways stability.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;Getting a robot to walk well in 3D can be a very frustrating process,&rdquo; said Xingye (Dennis) Da, a doctoral student in mechanical engineering.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">Taking a hint from Grizzle&rsquo;s long-time collaborator Jonathan Hurst at Oregon State University, who built MARLO, Da developed a way to control the robot with two 2D algorithms. This approach takes advantage of what the team learned by working with MABEL.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s"><a data-flickr-embed="true" data-vr="true"  href="https://www.flickr.com/photos/samayoukodomo/31345715921/in/pool-equirectangular/" title="Hundertwasserhaus"><img src="https://c2.staticflickr.com/6/5817/31345715921_e0710deb75_h.jpg" width="1600" height="800" alt="Hundertwasserhaus"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;The method could help many researchers speed up the process of achieving stable walking on their robots,&rdquo; said Da, who designed this control algorithm.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">The main controller handles the forward and backward motion and balance, while a second controller handles side-to-side balance. Da created a library of 15 gaits to handle different walking speeds and ground heights. Each gait is optimized for energy efficiency—making the movement as natural as possible—and respects the constraints of the robot.</p>
+            {{>callout--3_col}}
+            <p class="wow fadeIn" data-wow-delay=".01s">Armed with this knowledge, MARLO steps blindly, sensing the changes in ground height and adjusting her gait according to terrain and speed. She blends gaits from the library to fit her environment.</p>
+            {{>callout--related}}
+            <p class="wow fadeIn" data-wow-delay=".01s">Using an Xbox controller, Da can tell MARLO how quickly to walk and in what direction. But the rest is up to her. MARLO demonstrated this algorithm in tests walking through snow, down a steep hill, and on randomly stacked plywood squares covered in astroturf and scattered with more obstacles.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">Although impressive, this approach has inherent limitations. It works as long as the robot doesn&rsquo;t have to make quick turns or sideways movements, but to achieve true agility, the control algorithm must be more integrated.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">Working toward this goal, Brent Griffin, a doctoral student in electrical engineering and computer science, is developing a fully 3D controller. While the control algorithm based on 2D robots can walk at different speeds, this controller has an optimal speed that it returns to. It can slow down and speed up as necessary to manage difficult terrain.</p>
+            {{!-->callout--citations--}} {{>article--topics}} {{>article--contact}}
+            <div class="reveal large fast" id="img01" data-reveal data-deep-link="true" data-animation-in="scale-in-up" data-animation-out="fade-out">
+                <!-- article gallery row --><img class="orbit-image" src="{{root}}assets/img/deploy-cygnss.gif" alt="Space">
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="small-12 large-3 columns right_rail wow fadeIn show-for-medium show-for-large" data-wow-delay="1s">{{>sidebar--researchers}} {{>sidebar--in_the_news}} {{>sidebar--newsletter}}
+        </div>
+    </div>
+</section>
+{{>article--sticky_social_bar}}

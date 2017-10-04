@@ -1,0 +1,30 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the parent category page for feature stories
+tag: Feature Stories
+shorttag: Features
+layout: media
+---
+<div class="category_page features" id="content">
+    <section class="lead_story">
+        <a href="http://dme.engin.umich.edu/spaceweather/" target="_blank"><img src="{{root}}assets/img/lightsout.png" alt="Placeholder">
+            <div class="overlay small-12 medium-8 large-7 xlarge-6 bottom_centered">
+                <h2 class="hed">LIGHTS OUT</h2>
+                <p class="dek">A dramatization of disaster, and the science behind it.</p>
+                <p class="sub">Experts believe the next big solar storm could knock out most of our electrical grid for months or years. We imagine what that would be like. Then we explain what we’ve done to prepare, and what’s left to do.</p>
+            </div>
+        </a>
+    </section>
+    <div class="features_listing_title row">
+        <div class="column"><span>Latest {{tag}}</span>
+            <hr>
+        </div>
+    </div>
+    <section class="features_listing row">
+        {{#repeat 4}} {{>category--features_item-v2}} {{/repeat}}
+    </section>
+    <div class="row align-center">
+        <div class="column large-12 text-center">{{>pagination}}</div>
+    </div>
+</div>
+{{>breadcrumbs--alt}}

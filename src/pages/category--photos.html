@@ -1,0 +1,78 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the parent category page for photos
+tag: Photography
+shorttag: Visual Adventures
+layout: media
+---
+<div class="category_page photos" id="content">
+    <section class="lead_story">
+        <a href="{{root}}single_photo.html"><img src="{{root}}assets/img/28254398624_0f3c1feba3_k.jpg" alt="placeeeeeeholllllllllllla">
+        </a>
+    </section>
+    <div class="row">
+        <div class="small-12 medium-8 large-10 column lead_img_cap">
+            <div class="eyebrow">
+                <h1>Photography</h1></div>
+            <a class="row" href="{{root}}single_photo.html" alt="placeeeeeeholllllllllllla"><h2 class="hed shrink">MSE Yalisove Optics Lab</h2>
+                        <p class="dek">Keegan Schrider, Materials Science and Engineering PhD Student, blows liquid nitrogen over an optics setup in order to make lasers visible in the Karl A. Gerstacker Building on North Campus of the University of Michigan in Ann Arbor, MI on August 5, 2016.</p>
+                        <p class="credit">Photo: Joseph Xu, Michigan Engineering, Communications &amp; Marketing</p></a>
+            <div class="row social_share">
+                <div class="column small-3 shrink"><a class="facebook menu_icon" href="http://www.facebook.com/michigan.engineering"><i class="fa fa-facebook fa-inverse"></i></a></div>
+                <div class="column small-3 shrink"><a class="twitter menu_icon" href="https://twitter.com/UMengineering"><i class="fa fa-twitter fa-inverse"></i></a></div>
+                <div class="column small-3 shrink"><a class="envelope menu_icon" href="https://www.instagram.com/michiganengineering/"><i class="fa fa-envelope fa-inverse"></i></a></div>
+                <div class="column small-3 shrink"><a class="plus menu_icon" href="https://www.youtube.com/user/michiganengineering"><i class="fa fa-plus fa-inverse"></i></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="photo_listing_title row">
+        <div class="large-12 column"><span>{{shorttag}}</span>
+            <hr>
+        </div>
+    </div>
+    <section class="photo_listing large">
+        <div class="row align-center">
+            {{>category--photos--large_item}} {{>category--photos--large_item_port}}
+        </div>
+    </section>
+    <section class="photo_listing">
+        <div class="photo_listing_title row third">
+            <div class="large-12 column"><span>Research</span> <a href="{{root}}category--photo_sub.html"><span class="cat_link">See all Research</span></a>
+                <hr>
+            </div>
+        </div>
+        <div class="row align-center">
+            <div class="large-12 column">
+                <div class="grid small-up-1 medium-up-2 large-up-3 row">{{#repeat 6}} {{>category--photos--listing_item}} {{/repeat}}</div>
+            </div>
+        </div>
+    </section>
+    <section class="photo_listing">
+        <div class="photo_listing_title row secondary">
+            <div class="large-12 column"><span>Features</span> <a href="{{root}}category--photo_sub.html"><span class="cat_link">See all FEATURES</span></a>
+                <hr>
+            </div>
+        </div>
+        <div class="row align-center">
+            <div class="large-12 column">
+                <div class="grid small-up-1 medium-up-2 large-up-3 row">{{#repeat 6}} {{>category--photos--listing_item}} {{/repeat}}</div>
+            </div>
+        </div>
+    </section>
+    <section class="photo_listing">
+        <div class="photo_listing_title row secondary">
+            <div class="large-12 column"><span>Campus &amp; Community</span> <a href="{{root}}category--photo_sub.html"><span class="cat_link">See all Campus &amp; Community</span></a>
+                <hr>
+            </div>
+        </div>
+        <div class="row align-center">
+            <div class="large-12 column">
+                <div class="grid small-up-1 medium-up-2 large-up-3 row">{{#repeat 6}} {{>category--photos--listing_item}} {{/repeat}}</div>
+            </div>
+        </div>
+    </section>
+    <div class="row align-center">
+        <!-- <div class="small-12 medium-5 large-3 column text-center"><a href="#" class="button load_more">MORE PHOTOS</a></div> -->
+    </div>
+</div>
+{{>breadcrumbs--alt}}

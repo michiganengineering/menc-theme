@@ -1,0 +1,20 @@
+---
+title: The Michigan Engineer News Center | Michigan Engineering
+description: This is the Search Results Page
+tag: Search Results Page
+shorttag: Search Results
+---
+<div class="category_page" id="content">
+    <div class="row">
+        <h2 class="category_header column large-12">{{shorttag}}</h2></div>
+    <section class="row align-justify">
+        <div class="small-12 large-3 columns left_rail">
+           {{>sidebar--faceted_search}}
+        </div>
+        <div class="large-8 columns right_rail">
+            <div class="large-11">{{>search_listings}}
+            </div>
+            <div class="large-offset-4 column"><a href="#" class="button load_more">MORE RESULTS</a></div>
+        </div>
+    </section>
+</div>

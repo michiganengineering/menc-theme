@@ -1,0 +1,550 @@
+// Index Page
+// ----------
+.home {
+    @include breakpoint(xxlarge down) {
+        padding-top: 5rem;
+    }
+    @include breakpoint(medium down) {
+        padding-top: 2.5rem;
+    }
+    section {
+        margin-bottom: 5rem;
+    }
+    border-bottom: 1px solid $lighter-gray;
+    .time_label {
+        font-family: 'Open Sans';
+        font-size: .85rem;
+        font-weight: 700;
+    }
+    .trending_topics {
+        font-family: 'Open Sans';
+        font-size: .75rem;
+        margin: 0 0 3rem 0;
+        background-color: $lightest-gray;
+        .trending_items {
+            .item {
+                font-weight: 900;
+                padding: .5rem 0;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    background-color: $white-87;
+                }
+                a {
+                    color: $black;
+                    display: block;
+                    height: 100%;
+                    margin-top: 2px;
+                    &:hover {
+                        color: $arboretum-blue;
+                        @include breakpoint(small only) {
+                            color: $black;
+                            opacity: .8;
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+        .trending_topics_title {
+            font-family: 'bebas_neuebold';
+            color: $white;
+            background-color: $arboretum-blue;
+            @include breakpoint(small only) {
+                margin-right: 0;
+            }
+            span {
+                display: block;
+                font-size: .9rem;
+                padding: .5rem 0;
+            }
+        }
+    }
+    .lead_row {
+        a {
+            color: $black;
+            &:hover {
+                color: $arboretum-blue;
+                @include breakpoint(small only) {
+                    color: $black;
+                    opacity: .8;
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+        .lead_article {
+            position: relative;
+            margin-bottom: 1.25rem;
+            @include breakpoint(xlarge down) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+            img {
+                width: 100%;
+            }
+            a {
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
+                color: $white;
+                @include breakpoint(large down) {
+                    color: $white;
+                }
+                @include breakpoint(small only) {
+                    text-shadow: none;
+                    color: $black;
+                }
+                &:hover {
+                    color: $michigan-maize;
+                    text-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
+                    @include breakpoint(large down) {
+                        color: $white;
+                        opacity: .8;
+                        transition: all .2s ease-in-out;
+                        text-shadow: none;
+                    }
+                    @include breakpoint(small only) {
+                        text-shadow: none;
+                        color: $black;
+                    }
+                }
+            }
+            .overlay {
+                position: absolute;
+                bottom: 1.5rem;
+                left: 25%;
+                @include breakpoint(medium down) {
+                    left: 15%;
+                }
+                @include breakpoint(small only) {
+                    position: static;
+                }
+            }
+            .hed {
+                font-family: 'bebas_neuebold';
+                font-size: 3.75rem;
+                line-height: 1;
+                margin: 0;
+                @include breakpoint(medium down) {
+                    font-size: 2.75rem;
+                }
+                @include breakpoint(small only) {
+                    font-family: 'Open Sans';
+                    font-weight: 900;
+                    font-size: 1.75rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .secondary_articles {
+            @include breakpoint(xlarge down) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+            .article {
+                a {
+                    display: block;
+                    &:hover {
+                        cursor: pointer;
+                        color: $arboretum-blue;
+                        @include breakpoint(small only) {
+                            color: $black;
+                            opacity: .8;
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                }
+                .hed {
+                    font-family: 'Open Sans';
+                    font-weight: 900;
+                    font-size: 1.75rem;
+                    margin-top: 1rem;
+                    margin-bottom: 0;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+    .content_well {
+        @include breakpoint(large down) {
+            padding-left: $global-padding;
+            padding-right: $global-padding;
+        }
+        .column {
+            .section_title {
+                color: $white;
+                font-family: 'Open Sans';
+                font-size: 1rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                width: 100%;
+                margin-bottom: 0;
+                a {
+                    color: $white;
+                    width: 100%;
+                    display: inline-block;
+                    padding: .5rem;
+                    transition: all .2s ease-in-out;
+                    &:hover {
+                        color: $michigan-maize;
+                        background-color: darken($arboretum-blue, 38%);
+                    }
+                }
+                @include breakpoint(medium down) {
+                    font-size: .66rem;
+                    width: 100%;
+                }
+                span:first-child {
+                    padding: .5rem;
+                }
+                .go_link {
+                    width: 40px;
+                    height: 40px;
+                    @include breakpoint(medium down) {
+                        width: 35px;
+                        height: 35px;
+                    }
+                    a {
+                        color: $white;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: darken($arboretum-blue, 20%);
+                        transition: background-color .3s ease-in-out;
+                        &:hover {
+                            color: $michigan-maize;
+                            background-color: darken($arboretum-blue, 38%);
+                        }
+                        i {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+            hr {
+                margin-top: 0;
+                width: 100%;
+                border-bottom: 1px solid $light-gray;
+                margin-bottom: 0;
+            }
+        }
+        .article_link {
+            display: block;
+            color: $black;
+            border-bottom: 1px dashed $light-gray;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            &:hover {
+                color: $arboretum-blue;
+            }
+            &::last-child {
+                border-bottom: 0;
+            }
+            img {
+                margin-bottom: .5rem;
+            }
+        }
+        .lead_article {
+            .article_eyebrow,
+            .article_byline {
+                color: $black-54;
+                font-family: 'Open Sans';
+                font-size: .7rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                .fa-ellipsis-v {
+                    font-size: .65rem;
+                    margin: 0 .25rem;
+                }
+            }
+            .article_hed {
+                font-family: 'Open Sans';
+                font-size: 1.125rem;
+                font-weight: 900;
+            }
+            .article_dek {
+                font-size: 87.5%;
+            }
+        }
+        a {
+            color: $black;
+            &:hover {
+                color: $arboretum-blue;
+                @include breakpoint(small only) {
+                    color: $black;
+                    opacity: .8;
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+        .sub_article {
+            .article_eyebrow,
+            .article_byline {
+                font-family: 'Open Sans';
+                font-size: .7rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                .fa-ellipsis-v {
+                    font-size: .65rem;
+                    margin: 0 .25rem;
+                }
+            }
+        }
+        .article_hed {
+            font-family: 'Open Sans';
+            font-size: 1.125rem;
+            font-weight: 900;
+        }
+        .article_dek {
+            font-size: 87.5%;
+        }
+        .research_news {
+            .section_title {
+                background-color: darken($arboretum-blue, 15%);
+            }
+            .article_link {
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+        .campus_community {
+            .section_title {
+                background-color: darken($arboretum-blue, 25%);
+            }
+            .article_link {
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+        .faculty_perspectives {
+            .section_title {
+                background-color: darken($arboretum-blue, 35%);
+            }
+            .article_link {
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+        .in_the_news {
+            .section_title {
+                background-color: darken($arboretum-blue, 15%);
+            }
+            hr {
+                margin-bottom: 1rem;
+            }
+            .article_link {
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+        .history_section {
+            color: $white;
+            .history_articles {
+                background-color: $black-87;
+                padding-top: $global-padding !important;
+                padding-right: 0;
+                padding-bottom: $global-padding;
+                padding-left: $global-padding;
+                p {
+                    margin: 0;
+                    padding-right: $global-padding;
+                }
+                .section_tag {
+                    background-color: $black-87;
+                    font-family: 'Open Sans';
+                    font-weight: 900;
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    padding: .25rem .5rem;
+                    color: $white;
+                }
+                a {
+                    color: $white;
+                    &:hover {
+                        color: $michigan-maize;
+                        @include breakpoint(small only) {
+                            color: $black;
+                            opacity: .8;
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                }
+                .history_item {
+                    margin: 1rem 0;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid $white-24;
+                    .hed {
+                        font-family: 'Open Sans';
+                        font-weight: 900;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            .history_image {
+                // this may need to reworked due to wordpress limitations
+                background: url(../img/history-img.jpg) center right no-repeat;
+                background-size: cover;
+                @include breakpoint(medium down) {
+                    height: 10vh;
+                }
+            }
+        }
+    }
+    .photo {
+        hr {
+            border-bottom: 1px solid $lightest-gray;
+            margin-top: 0;
+        }
+        .listing {
+            color: $black;
+            p {
+                margin: 0;
+                padding-right: $global-padding;
+            }
+            .section_tag {
+                background-color: $arboretum-blue;
+                font-family: 'Open Sans';
+                font-weight: 900;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                padding: .25rem .5rem;
+                color: $white;
+            }
+            .photo_cta {
+                a {
+                    color: $black;
+                    font-family: 'Open Sans';
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: $arboretum-blue;
+                        @include breakpoint(small only) {
+                            color: $black;
+                            opacity: .8;
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+        .photo_container {
+            padding-right: 0;
+            padding-left: 0;
+            .photo_item {
+                margin: 1rem 0;
+                padding-bottom: 1rem;
+                a {
+                    color: $black;
+                    &:hover {
+                        color: $arboretum-blue;
+                        @include breakpoint(small only) {
+                            color: $black;
+                            opacity: .8;
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                }
+                .hed {
+                    font-family: 'Open Sans';
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+    .one_cool_thing {
+        color: $white;
+        background-color: darken( $michigan-blue, 5%);
+        margin: 0;
+        padding: 5rem 0;
+        .logo_container {
+            .logo {
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid $lighter-gray;
+                img {
+                    opacity: .25;
+                    width: 65%;
+                    margin: 0 auto;
+                }
+            }
+            .cta {
+                p {
+                    font-family: 'Open Sans';
+                    font-size: .9rem;
+                    font-weight: 400;
+                    color: $white;
+                    text-transform: uppercase;
+                    margin: 0;
+                    a {
+                        color: $white;
+                        font-weight: 900;
+                        &:hover {
+                            color: $michigan-maize;
+                            @include breakpoint(small only) {
+                                color: $black;
+                                opacity: .8;
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section_tag {
+            font-family: 'Open Sans';
+            font-size: 1.125rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            @include breakpoint(small only) {
+                padding: 1.25rem;
+            }
+        }
+        .article {
+            padding-left: $global-padding !important;
+            @include breakpoint(small only) {
+                padding: 1.25rem !important;
+            }
+            margin-top: 1.5rem;
+            .eyebrow {
+                font-family: 'Open Sans';
+                font-size: .875rem;
+                font-weight: 400;
+                color: $lightest-gray;
+                text-transform: uppercase;
+            }
+            .hed {
+                font-family: 'Open Sans';
+                font-size: 1.75rem;
+                font-weight: 900;
+                margin-bottom: 1rem;
+            }
+            .graf {
+                margin-bottom: 1rem;
+            }
+            .cta {
+                p {
+                    font-family: 'Open Sans';
+                    font-size: .9rem;
+                    font-weight: 400;
+                    color: $michigan-maize;
+                    text-transform: uppercase;
+                    margin: 0;
+                    a {
+                        color: $michigan-maize;
+                        font-weight: 900;
+                        &:hover {
+                            color: $white;
+                            @include breakpoint(small only) {
+                                color: $white;
+                                opacity: .8;
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

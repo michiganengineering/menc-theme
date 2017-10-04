@@ -1,0 +1,128 @@
+<!-- article long_content row -->
+<section class="content">
+    <div class="article_content row align-justify">
+        <div class="small-12 medium-8 large-8 columns article left_rail wow fadeIn" data-wow-delay="1s">
+            <h2 class="article_hed">Free-standing two-legged robot conquers terrain</h2>
+            <div class="byline row">
+                <div class="column shrink"><span class="float-left author">by Katherine McAlpine</span></div>
+                <div class="column shrink"><span class="date">Sep. 21, 2016</span></div>
+            </div>
+            <div class="subhed">An unsupported bipedal robot at the University of Michigan can now walk down steep slopes, through a thin layer of snow, and over uneven and unstable ground. | <span class="time_label">Medium read</span></div>
+            <!-- {{>article--social_bar}} --> {{>article--gallery}}
+            <p class="wow fadeIn dropcap" data-wow-delay=".01s" id="social_start">The robot&rsquo;s feedback control algorithms should be able to help other two-legged robots as well as powered prosthetic legs gain similar capabilities.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;The robot has no feeling in her tiny feet, but she senses the angles of her joints—for instance, her knee angles, hip angles and the rotation angle of her torso,&rdquo; said Jessy Grizzle, professor of electrical engineering and computer science and of mechanical engineering. &ldquo;It&rsquo;s like walking blindfolded and on stilts.&rdquo;</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">MARLO is Grizzle&rsquo;s first robot that can walk (and fall) in any direction, known as 3D walking. With their previous robot, MABEL, Grizzle&rsquo;s team produced leading control algorithms for robots that need to move in only two dimensions. MABEL was attached to a boom that gave her sideways stability.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;Getting a robot to walk well in 3D can be a very frustrating process,&rdquo; said Xingye (Dennis) Da, a doctoral student in mechanical engineering.</p>
+            <div class="img_float_right wow fadeIn" data-wow-delay=".1s">
+                <a data-open="img02" data-slide="1"><span class="arrow_container"><i class="fa fa fa-clone" aria-hidden="true"></i><span class="gallery_label">Enlarge</span></span><img src="{{root}}assets/img/marlo-02.jpg" alt="Placeholder" /></a>
+                <div class="row caption_container align-justify">
+                    <div class="caption small-12 column">IMAGE: The robot MARLO wobbling in its garage. Photo: Evan Dougherty</div>
+                    <!-- <div class="social_share column text-right"><span class="share_label">SHARE:</span><a href="#fracebrook"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#tritter"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#printarrest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></div> -->
+                </div>
+            </div>
+            <p class="wow fadeIn" data-wow-delay=".01s">Taking a hint from Grizzle&rsquo;s long-time collaborator Jonathan Hurst at Oregon State University, who built MARLO, Da developed a way to control the robot with two 2D algorithms. This approach takes advantage of what the team learned by working with MABEL.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;The method could help many researchers speed up the process of achieving stable walking on their robots,&rdquo; said Da, who designed this control algorithm.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">The main controller handles the forward and backward motion and balance, while a second controller handles side-to-side balance. Da created a library of 15 gaits to handle different walking speeds and ground heights. Each gait is optimized for energy efficiency—making the movement as natural as possible—and respects the constraints of the robot.</p>
+            <div class="content_wide_img">
+                <a data-open="img01"><span class="arrow_container"><i class="fa fa-clone" aria-hidden="true"></i><span class="gallery_label">Enlarge</span></span>
+                <img src="{{root}}assets/img/marlo-01.jpg" alt="Placeholder" /></a>
+                <div class="row caption_container align-justify">
+                    <div class="caption small-12 column">IMAGE: The robot MARLO walking in the wave field. Photo: Joseph Xu / Michigan Engineering</div>
+                    <!-- <div class="social_share column text-right"><span class="share_label">SHARE:</span><a href="#fracebrook"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#tritter"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#printerfist"><i class="fa fa-pinterest" aria-hidden="true"></i></a></div> -->
+                </div>
+            </div>
+            <p class="wow fadeIn" data-wow-delay=".01s">Armed with this knowledge, MARLO steps blindly, sensing the changes in ground height and adjusting her gait according to terrain and speed. She blends gaits from the library to fit her environment.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">Using an Xbox controller, Da can tell MARLO how quickly to walk and in what direction. But the rest is up to her. MARLO demonstrated this algorithm in tests walking through snow, down a steep hill, and on randomly stacked plywood squares covered in astroturf and scattered with more obstacles.</p>
+            <div class="video wow fadeIn" data-wow-delay=".01s">
+                <div class="flex-video widescreen">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YJAGiXhA8gU?showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="caption">VIDEO: MARLO walking. Videography: Evan Dougherty</div>
+            </div>
+            <p class="wow fadeIn" data-wow-delay=".01s">Although impressive, this approach has inherent limitations. It works as long as the robot doesn&rsquo;t have to make quick turns or sideways movements, but to achieve true agility, the control algorithm must be more integrated.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">Working toward this goal, Brent Griffin, a doctoral student in electrical engineering and computer science, is developing a fully 3D controller. While the control algorithm based on 2D robots can walk at different speeds, this controller has an optimal speed that it returns to. It can slow down and speed up as necessary to manage difficult terrain.</p>
+            <div class="flip">
+                <blockquote id="card1" class="card wow headShake tweet-this" data-wow-delay=".5s" data-wow-iteration="2">
+                    <div class="front">We try to write it precisely and generally enough that others can use it, and they don&rsquo;t have to call us up and say, &lsquo;What&rsquo;s the special sauce?&rsquo;
+                        <cite>Jessie Grizzle</cite>
+                        <div class="social_share text-right">
+                            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=What&rsquo;s the special sauce&#63;&rsquo;" data-size="large">Tweet</a></div>
+                    </div>
+                </blockquote>
+            </div>
+            <p class="wow fadeIn" data-wow-delay=".01s">Through computer simulations, Griffin tests the 3D controller against a range of terrain and speed disturbances to ensure reliable walking in varying real-world conditions. MARLO demonstrated this control method by walking over plywood obstacles in the lab and for hundreds of steps outdoors on pavement. The researchers believe that MARLO&rsquo;s gait using this algorithm is the most efficient yet for a bipedal robot.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">“We are able to design full 3D walking gaits using a mathematical model of the robot and then apply them directly to MARLO,” Griffin said. “Because the implementation works without any robot-specific modifications, it is generalizable to other walking robots.”</p>
+            <div class="callout secondary photo two_col full wow fadeIn" data-wow-delay=".01s">
+                <div class="row">
+                    <div class="small-12 large-6 column">
+                        <img class="orbit-image" src="{{root}}assets/img/marlo-03.jpg" alt="Space">
+                    </div>
+                    <div class="small-12 large-6 column">
+                        <p class="hed">Getting a robot to walk well in 3D can be a very frustrating process</p>
+                        <p class="dek">Dennis Da, a key member of the team, working with MARLO</p>
+                    </div>
+                </div>
+            </div>
+            <p class="wow fadeIn" data-wow-delay=".01s">Over the summer, the team plans to merge the two control algorithms into one &ldquo;super-algorithm&rdquo; that can support more agile movements.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">MARLO exhibits the best walking ability that the team knows of for a robot that doesn&rsquo;t have powered ankles, but Grizzle emphasizes that MARLO isn&rsquo;t the point.</p>
+            <div class="flex-video widescreen wow fadeIn" data-wow-delay=".01s">
+                <iframe src='https://gfycat.com/ifr/MistyMisguidedEskimodog' frameborder='0' scrolling='no' width='640' height='360' allowfullscreen></iframe>
+            </div>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;The major product of our research is a recipe for legged locomotion,&rdquo; said Grizzle, the Elmer G. Gilbert Distinguished University Professor of Engineering and the Jerry W. and Carol L. Levin Professor of Engineering. &ldquo;We try to write it precisely and generally enough that others can use it, and they don&rsquo;t have to call us up and say, &lsquo;What&rsquo;s the special sauce?&rsquo;&rdquo;</p>
+            <div class="callout primary three_col full wow fadeInUp" data-wow-delay=".75s">
+                <div class="row">
+                    <div class="main_hed text-center column large-12">&mdash;THE SPECIAL SAUCE&mdash;</div>
+                </div>
+                <div class="row text-center big_text align-center">
+                    <div class="small-12 medium-4 large-4 column card effect__click">
+                        <p class="hed">12%</p>
+                        <p class="dek">Score on the Voight-Kampff test</p>
+                    </div>
+                    <div class="small-12 medium-4 large-4 column card effect__click">
+                        <p class="hed">1</p>
+                        <p class="dek">Xbox Controller</p>
+                    </div>
+                    <div class="small-12 medium-4 large-4 column card effect__click">
+                        <p class="hed">54K</p>
+                        <p class="dek">Lines of Code</p>
+                    </div>
+                </div>
+            </div>
+            <p class="wow fadeIn" data-wow-delay=".01s">The codes that Grizzle&rsquo;s team used to make MARLO walk on flat ground serve as the basis for algorithms developed in other labs for different kinds of robots. Robert Gregg, an assistant professor of mechanical engineering and bioengineering at the University of Texas-Dallas, adapted the algorithm to control a prosthetic lower leg. When an amputee tried out Gregg&rsquo;s robotic leg on a treadmill, he was able to walk naturally. Gregg has seen the latest MARLO videos.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">&ldquo;The ability of MARLO to gracefully navigate uneven terrains is very exciting for my work in prosthetics,&rdquo; Gregg said. &ldquo;We hope to encode similar abilities into our robotic prosthetic leg so that lower-limb amputees can just as easily walk about the terrain without having to think about the community.&rdquo;</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">This work was funded by the National Science Foundation.</p>
+            <p class="wow fadeIn" data-wow-delay=".01s">In other recent MARLO videos, the robot walks down a <a title="sleep stope" href="#steepy">steep slope</a>, in the <a title="snow" href="#snowy">snow</a>, on a long <a title="walk" href="#walkie">walk</a> and in a <a title="u-turn" href="#yourturny">u-turn</a>.</p>
+            <div class="callout related light-gray full wow fadeIn" data-wow-delay=".01s">
+                <div class="row">
+                    <div class="main_hed column large-12">Related Links</div>
+                    <div class="column small-12 large-6">
+                        <p><a href="#related">Related link Alpha</a></p>
+                        <p><a href="#related">Related link long Bravo</a></p>
+                        <p><a href="#related">Related link longer Charlie</a></p>
+                    </div>
+                    <div class="column small-12 large-6">
+                        <p><a href="#related">Related link longest Delta</a></p>
+                        <p><a class="external" href="https://google.com" target="blank">Related link external Foxtrot</a></p>
+                        <p><a class="external" href="https://google.com" target="blank">Related link not internal Echo</a></p>
+                    </div>
+                </div>
+            </div>{{>article--topics}} {{>article--contact}} {{>callout--citations}}{{>article--related}}
+            <div class="reveal large fast" id="img01" data-reveal data-deep-link="true" data-animation-in="scale-in-up" data-animation-out="fade-out">
+                <img src="{{root}}assets/img/marlo-01.jpg" alt="Space">
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="reveal large fast" id="img02" data-reveal data-deep-link="true" data-animation-in="scale-in-up" data-animation-out="fade-out">
+                <img class="orbit-image is-active" src="{{root}}assets/img/marlo-02.jpg" alt="Space">
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+        </div>
+        <div class="small-12 medium-4 large-3 columns right_rail wow fadeInUp" data-wow-delay=".1s">{{>sidebar--researchers}} {{>sidebar--in_the_news}} {{!-- >sidebar--newsletter --}} {{>sidebar--newsletter-v2}} {{>sidebar--impact}}
+        </div>
+    </div>
+</section>
+{{>article--sticky_social_bar}}

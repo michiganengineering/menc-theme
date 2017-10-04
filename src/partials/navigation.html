@@ -1,0 +1,165 @@
+<div id="skip"><a href="#content">Skip to Content</a></div>
+<div class="navigation" id="navigation">
+    <div class="title-bar row align-bottom expanded collapse">
+        <div class="row bottom align-middle expanded collapse">
+            <div class="small-1 hide-for-large menu_icon">
+                <button class="hamburger hamburger--slider" type="button" data-toggle="main-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                </button>
+            </div>
+            <div class="column small-7 medium-3 large-4 logo_container align-self-bottom">
+                <div class="title-bar-title">
+                    <a class="logo" href="./"><img src="./assets/img/CoE-NEWS-horiz-rev.svg" alt="College of Engineering | University of Michigan"></a>
+                </div>
+            </div>
+            <div class="column show-for-large align-self-bottom menu_row">
+                <div class="row main_menu align-justify">
+                    <div {{#ifpage 'category--research'}}class="is-active column category align-self-bottom" {{/ifpage}} {{#ifpage 'subcategory--all'}}class="is-active column category align-self-bottom" {{/ifpage}} class="column category align-self-bottom" data-toggle="main-menu">
+                        <button><span class="menu_label">Research</span></button>
+                    </div>
+                    <div {{#ifpage 'category--photos'}}class="is-active column category large-4  align-self-bottom" {{/ifpage}} {{#ifpage 'category--campus'}}class="is-active column category large-4  align-self-bottom" {{/ifpage}} {{#ifpage 'generic'}}class="is-active column category large-4  align-self-bottom" {{/ifpage}} class="column category large-4  align-self-bottom" data-toggle="main-menu">
+                        <button><span class="menu_label">Campus &amp; Community</span></button>
+                    </div>
+                    <div {{#ifpage 'category--department'}}class="is-active column category align-self-bottom" {{/ifpage}} {{#ifpage 'category--department-all-v2'}}class="is-active column category align-self-bottom" {{/ifpage}} class="column category align-self-bottom" data-toggle="main-menu">
+                        <button><span class="menu_label">By Department</span></button>
+                    </div>
+                    <div class="column large-2 category menu_controls align-self-bottom" data-toggle="main-menu">
+                        <div class="row align-center align-bottom">
+                            <div class="small-4 column align-self-bottom" data-toggle="main-menu">
+                                <button class="menu_icon"><i class="fa fa-search" data-toggle="main-menu" aria-hidden="true"></i>
+                                    <div data-toggle="main-menu" class="icon_label search">search</div>
+                                </button>
+                            </div>
+                            <div class="small-3 end column align-self-bottom" data-toggle="main-menu">
+                                <button class="menu_icon hamburger hamburger--slider large" data-toggle="main-menu" aria-hidden="true"><span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                                    <div class="icon_label for_button">menu</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{#ifpage 'article--standard' 'article--short' 'article--standard_long' 'article--standard-callouts'}}
+            <progress value="0" id="progressBar" class="flat">
+                <div class="progress-container">
+                    <span class="progress-bar"></span>
+                </div>
+            </progress>
+            {{/ifpage}}
+        </div>
+        <div class="dropdown-pane row expanded medium-uncollapse large-collapse menu" id="main-menu" data-dropdown data-close-on-click="true">
+            <div class="row align-spaced small-text-center medium-text-center large-text-left">
+                <div class="column small-8 medium-6 large-2 large-expand">
+                    <p class="list_hed"><a href="{{root}}category--research.html">Research »</a></p>
+                    <ul>
+                        <li><a href="{{root}}subcategory--all.html">Advanced Manufacturing</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Data &amp; Computing</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Energy &amp; Environment</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Health</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Infrastructure</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Materials</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Robotics</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Security</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Space</a></li>
+                        <li><a href="{{root}}subcategory--all.html">Transportation</a></li>
+                    </ul>
+                </div>
+                <div class="column small-8 medium-6 large-2 large-expand">
+                    <p class="list_hed"><a href="{{root}}category--campus.html">Campus &amp; Community »</a></p>
+                    <ul>
+                        <li><a href="{{root}}category--photos.html">Photography</a></li>
+                        <li><a href="{{root}}category--generic.html">Awards</a></li>
+                        <li><a href="{{root}}category--generic.html">Faculty</a></li>
+                        <!-- <li><a href="{{root}}category--generic.html">Faculty Perspectives</a></li> -->
+                        <li><a href="{{root}}category--generic.html">Students</a></li>
+                        <li><a href="{{root}}category--generic.html">Alumni</a></li>
+                        <li><a href="{{root}}generic.html">Events</a></li>
+                        <li><a href="{{root}}generic.html">Giving</a></li>
+                        <li><a href="{{root}}category--generic.html">Admin News &amp; Announcements</a></li>
+                    </ul>
+                </div>
+                <div class="column small-8 medium-6 large-4 large-expand">
+                    <p class="list_hed"><a href="{{root}}category--department-all-v2.html">By Department »</a></p>
+                    <ul class="">
+                        <li><a href="{{root}}category--department.html">Aerospace Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Biomedical Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Chemical Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Civil and Environmental Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Climate and Space Sciences and Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Electrical Engineering and Computer Science</a></li>
+                        <li><a href="{{root}}category--department.html">Industrial and Operations Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Integrative Systems + Design</a></li>
+                        <li {{#ifpage 'category--department'}}class="is-active" {{/ifpage}}><a href="{{root}}category--department.html">Materials Science and Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Mechanical Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Naval Architecture and Marine Engineering</a></li>
+                        <li><a href="{{root}}category--department.html">Nuclear Engineering and Radiological Sciences</a></li>
+                        <li><a href="{{root}}category--department.html">Other Units</a></li>
+                    </ul>
+                </div>
+                <div class="column small-8 medium-6 large-2 large-expand">
+                    <p class="list_hed">More</p>
+                    <ul>
+                        <li><a href="{{root}}magazine.html">Magazine</a></li>
+                        <li><a href="{{root}}about.html">About</a></li>
+                        <li><a href="{{root}}media.html">For the Media</a></li>
+                        <li><a href="{{root}}category--features.html">Features</a></li>
+                        <li><a href="{{root}}category--videos.html">Videos</a></li>
+                        <li><a href="{{root}}category--photos.html">Photography</a></li>
+                        <li><a href="{{root}}category--generic.html">Faculty Perspectives</a></li>
+                        <li><a href="{{root}}category--newshits.html">In the News</a></li>
+                        <!--                         <li><a href="{{root}}subscribe.html">Subscribe</a></li>
+ -->
+                        <li><a href="http://www.engin.umich.edu/college/" target="_blank">Michigan Engineering Home</a></li>
+                    </ul>
+                </div>
+                <div class="column small-7 medium-8 small-centered large-expand border-left actions">
+                    <div class="search_row">
+                        <form class="search" action="{{root}}search_results.html" method="get">
+                            <label for="input-group">
+                                <span class="search_hed">SEARCH</span>
+                                <br>Enter search term(s)</label>
+                            <div class="input-group">
+                                <input class="input-group-field" type="text" id="input-group" name="search">
+                                <div class="input-group-button">
+                                    <input type="submit" class="button" value="go">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sign_up_row">
+                        <form class="sign_up" action="{{root}}subscribe.html" method="get">
+                            <label for="input-group-02">
+                                <span class="search_hed">Don't miss a thing!</span>
+                                <br>Subscribe to The Michigan Engineering newsletter!
+                                <br><span class="lighter-text">enter email</span>
+                                <br>
+                            </label>
+                            <div class="input-group">
+                                <input class="input-group-field" type="email" id="input-group-02" name="email">
+                                <div class="input-group-button">
+                                    <input type="submit" class="button" value="yes!">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="align-center social_drop">
+                        <div>
+                            <p class="follow_us_hed">FOLLOW US | <a href="#rss"><i class="fa fa-rss" aria-hidden="true"></i></a></p>
+                        </div>
+                        <div class="row social_row">
+                            <div class="column small-3"><a class="facebook menu_icon" href="http://www.facebook.com/michigan.engineering"><i class="fa fa-facebook fa-inverse"></i></a></div>
+                            <div class="column small-3"><a class="twitter menu_icon" href="https://twitter.com/UMengineering"><i class="fa fa-twitter fa-inverse"></i></a></div>
+                            <div class="column small-3"><a class="instagram menu_icon" href="https://www.instagram.com/michiganengineering/"><i class="fa fa-instagram fa-inverse"></i></a></div>
+                            <div class="column small-3 end"><a class="youtube menu_icon" href="https://www.youtube.com/user/michiganengineering"><i class="fa fa-youtube fa-inverse"></i></a></div>
+                        </div>
+                        <div class="row">
+                            <div class="column small-3"><a class="snapchat-ghost menu_icon" data-open="snapchat"><i class="fa fa-snapchat-ghost fa-inverse"></i></a></div>
+                            <div class="column small-3"><a class="tumblr menu_icon" href="https://twitter.com/UMengineering"><i class="fa fa-tumblr fa-inverse"></i></a></div>
+                            <div class="column small-3"><a class="linkedin menu_icon" href="https://www.instagram.com/michiganengineering/"><i class="fa fa-linkedin fa-inverse"></i></a></div>
+                            <div class="column small-3 end"><a class="pinterest menu_icon" href="https://www.youtube.com/user/michiganengineering"><i class="fa fa-pinterest fa-inverse"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

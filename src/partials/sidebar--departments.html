@@ -1,0 +1,13 @@
+<section class="subnav departments">
+    <div class="departments_subnav_title row">
+        <div class="large-12 column"><span>Explore Departments</span>
+            <hr>
+        </div>
+    </div>
+    <div class="listing">
+        <ul>{{#each departments}}
+            <li><a href="{{root}}category--department.html">{{ this }}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+{{#ifpage 'category--photos'}}
+<nav class="row expanded align-spaced" aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs alt">
+        <li><a href="{{root}}index.html">Home</a></li>
+        <li>
+            <span class="show-for-sr">Current: </span> {{tag}}
+        </li>
+    </ul>
+</nav>
+{{/ifpage}} {{#ifpage 'category--photo_sub'}}
+<nav class="row expanded align-center" aria-label="You are here:" role="navigation">
+    <div class="column large-4 text-center">
+        <ul class="breadcrumbs alt row align-center">
+            <li><a href="{{root}}index.html">Home</a></li>
+            <li><a href="{{root}}category--photos.html">Photography</a></li>
+            <li>
+                <span class="show-for-sr">Current: </span> {{tag}}
+            </li>
+        </ul>
+    </div>
+</nav>
+{{/ifpage}} {{#ifpage 'category--features' 'category--features-v2' 'category--features-v3'}}
+<nav class="row expanded align-spaced inverse" aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs alt row">
+        <li><a href="{{root}}index.html">Home</a></li>
+        <li>
+            <span class="show-for-sr">Current: </span> {{tag}}
+        </li>
+    </ul>
+</nav>
+{{/ifpage}} {{#ifpage 'category--videos'}}
+<nav class="row expanded align-spaced" aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs alt">
+        <li><a href="{{root}}index.html">Home</a></li>
+        <li>
+            <span class="show-for-sr">Current: </span> {{shorttag}}
+        </li>
+    </ul>
+</nav>
+{{/ifpage}}

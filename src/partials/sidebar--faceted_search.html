@@ -1,0 +1,84 @@
+{{#ifpage 'search_results'}}
+  <section class="subnav search">
+    <div class="search_title row">
+        <div class="large-12 column"><span>Refine Search by</span>
+            <hr>
+        </div>
+    </div>
+    <div class="listing vertical menu" data-accordion-menu>
+        <ul>
+            <li><a class="is-active" href="{{root}}search_results.html">All results</a></li>
+            <li><a href="{{root}}search_results_filtered.html">By Department</a>
+                <ul class="menu vertical">
+                    {{#each departments}}
+                    <li><a href="{{root}}search_results_filtered.html">{{ this }}</a></li>
+                    {{/each}}
+                    <li><a href="{{root}}search_results_filtered.html">All Deparments</a></li>
+                </ul>
+            </li>
+            <li><a href="{{root}}search_results_filtered.html">By Research Area</a>
+                <ul class="menu vertical">
+                    {{#each topics}}
+                    <li><a href="{{root}}search_results_filtered.html">{{ this }}</a></li>
+                    {{/each}}
+                    <li><a href="{{root}}search_results_filtered.html">All Areas</a></li>
+                </ul>
+            </li>
+            <li><a href="{{root}}search_results_filtered.html">Photos</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Videos</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Features</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div class="listing vertical menu">
+        <ul>
+            <li><a class="is-active" href="{{root}}search_results_filtered.html">All time</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Last week</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Last month</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Last year</a></li>
+        </ul>
+    </div>
+</section>
+{{/ifpage}}
+{{#ifpage 'search_results_filtered'}}
+<section class="subnav search">
+    <div class="search_title row">
+        <div class="large-12 column"><span>Refine Search by</span>
+            <hr>
+        </div>
+    </div>
+    <div class="listing vertical menu" data-accordion-menu>
+        <ul>
+            <li><a href="{{root}}search_results.html">All results</a></li>
+            <li><a class="is-active" href="{{root}}search_results_filtered.html">By Department</a>
+                <ul class="menu vertical">
+                    {{#each departments}}
+                    <li><a href="{{root}}search_results_filtered.html">{{ this }}</a></li>
+                    {{/each}}
+                    <li><a href="{{root}}search_results_filtered.html">All Deparments</a></li>
+                </ul>
+            </li>
+            <li><a class="is-active" href="{{root}}search_results_filtered.html">By Research Area</a>
+                <ul class="menu vertical">
+                    {{#each topics}}
+                    <li><a href="{{root}}search_results_filtered.html">{{ this }}</a></li>
+                    {{/each}}
+                    <li><a href="{{root}}search_results_filtered.html">All Areas</a></li>
+                </ul>
+            </li>
+            <li><a href="{{root}}search_results_filtered.html">Photos</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Videos</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Features</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div class="listing vertical menu">
+        <ul>
+            <li><a href="{{root}}search_results_filtered.html">All time</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Last week</a></li>
+            <li><a href="{{root}}search_results_filtered.html">Last month</a></li>
+            <li><a class="is-active" href="{{root}}search_results_filtered.html">Last year</a></li>
+        </ul>
+    </div>
+</section>
+{{/ifpage}}
