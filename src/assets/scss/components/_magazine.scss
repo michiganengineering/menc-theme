@@ -1,0 +1,84 @@
+// Mag Town
+// ----------------
+footer {
+    // footer
+    section.magazine {
+        padding: 5rem 0;
+        a {
+            color: $white;
+            &:hover {
+                color: $michigan-maize;
+            }
+            img {
+                transition: all .2s ease-in-out;
+                opacity: .8;
+                &:hover {
+                    box-shadow: 0px 0px 21px -1px rgba(255, 255, 255, 0.25);
+                    opacity: 1;
+                }
+            }
+        }
+        .section_title {
+            margin-bottom: 1rem;
+            p {
+                font-family: 'Open Sans';
+                font-size: 1.125rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin: 0;
+                line-height: 1;
+                letter-spacing: .05rem;
+                span {
+                    letter-spacing: normal;
+                }
+            }
+        }
+        .mag_title {
+            font-family: 'Open Sans';
+            font-size: .9rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+    }
+}
+
+section.magazine {
+    // articles
+        padding: 5rem 0;
+        margin-bottom: 5rem;
+        a {
+            color: $black;
+            &:hover {
+                color: $arboretum-blue;
+            }
+            img {
+                transition: all .2s ease-in-out;
+                &:hover {
+                    box-shadow: 0px 0px 21px -1px $black-54;
+                }
+            }
+        }
+        .section_title {
+            margin-bottom: 1rem;
+            p {
+                font-family: 'Open Sans';
+                font-size: 1.125rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin: 0;
+                line-height: 1;
+                letter-spacing: .05rem;
+                span {
+                    letter-spacing: normal;
+                }
+            }
+        }
+        .mag_title {
+            font-family: 'Open Sans';
+            font-size: .9rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+    }

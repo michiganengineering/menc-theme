@@ -1,0 +1,88 @@
+.video {
+    .playlist {
+        background-color: $faint-gray;
+    }
+    .listing {
+        color: $black;
+        padding-top: $global-padding !important;
+        padding-right: 0;
+        padding-bottom: $global-padding;
+        padding-left: $global-padding;
+        @include breakpoint(medium only) {
+            padding-bottom: .75rem;
+        }
+        p {
+            margin: 0;
+            padding-right: $global-padding;
+        }
+        .section_tag {
+            background-color: $michigan-maize;
+            font-family: 'Open Sans';
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: .25rem .5rem;
+            color: $black;
+        }
+        .video_item {
+            margin: 1rem 0;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed $light-gray;
+            @include breakpoint(medium only) {
+                margin: .5rem 0;
+                padding-bottom: .5rem;
+            }
+            &.active {
+                border-bottom: 1px solid $michigan-maize;
+                transition: all .2s ease-in-out;
+                a {
+                    color: $black-100;
+                    &:hover {
+                        color: $arboretum-blue;
+                    }
+                }
+            }
+            a {
+                color: $black-54;
+                &:hover {
+                    color: $arboretum-blue;
+                }
+            }
+            .hed {
+                font-family: 'Open Sans';
+                font-weight: 900;
+                font-size: 1.4rem;
+                @include breakpoint(medium only) {
+                    font-size: .8rem;
+                }
+            }
+            .dek {
+                @include breakpoint(medium only) {
+                    font-size: .7rem;
+                }
+            }
+        }
+        .video_cta {
+            a {
+                color: $black;
+                font-family: 'Open Sans';
+                font-weight: 900;
+                text-transform: uppercase;
+                &:hover {
+                    color: $arboretum-blue;
+                }
+                @include breakpoint(medium only) {
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+    .video_wrapper {
+        padding-right: 0;
+        padding-left: 0;
+        border-left: 2px solid $michigan-maize;
+    }
+    .flex-video {
+        margin-bottom: 0;
+    }
+}

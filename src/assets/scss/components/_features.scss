@@ -1,0 +1,87 @@
+.indepth {
+    .collapse {
+        background-color: $faint-gray;
+    }
+    .lead_story {
+        position: relative;
+    }
+    .overlay {
+        position: absolute;
+        color: $white;
+        z-index: 9;
+        bottom: 3.5rem;
+        left: 2rem;
+        background-color: $black-54;
+        padding: $global-padding;
+        transition: all .2s ease-in-out;
+        @include breakpoint(medium down) {
+            position: static;
+            background-color: $black-100;
+            transition: all .2s ease-in-out;
+        }
+        &:hover {
+            background-color: $black-87;
+            @include breakpoint(medium down) {
+                background-color: $black-100;
+            }
+        }
+        .hed {
+            font-family: 'bebas_neuebold';
+            font-size: 6em;
+            margin: 0;
+            line-height: 1;
+        }
+        .dek {
+            margin: 0;
+        }
+    }
+    .listing {
+        color: $black;
+        padding-top: $global-padding !important;
+        padding-right: $global-padding;
+        padding-bottom: $global-padding;
+        padding-left: 0;
+        a {
+            color: $black;
+            &:hover {
+                color: $arboretum-blue;
+            }
+        }
+        p {
+            margin: 0;
+            padding-left: $global-padding;
+        }
+        .section_tag {
+            background-color: $michigan-blue;
+            font-family: 'Open Sans';
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: .25rem .5rem;
+            margin-left: 1.5rem;
+            color: $white;
+        }
+        .indepth_item {
+            margin: 1rem 0;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed $light-gray;
+            .hed {
+                font-family: 'Open Sans';
+                font-weight: 900;
+                font-size: 1.4rem;
+            }
+        }
+        .features_cta {
+            padding-left: $global-padding;
+            a {
+                color: $black;
+                font-family: 'Open Sans';
+                font-weight: 900;
+                text-transform: uppercase;
+                &:hover {
+                    color: $arboretum-blue;
+                }
+            }
+        }
+    }
+}
