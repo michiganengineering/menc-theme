@@ -54,79 +54,10 @@
         <span class="scroll-top-inner"><span class="fa-stack fa-lg"><i class="fa fa-2x fa-angle-up fa-inverse"></i><i class="fa fa-circle fa-stack-2x"></i></span></span>
     </div>
     <script src="{{root}}assets/js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/jQuery.headroom.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/jQuery.headroom.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.js"></script>
     <!-- <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script> -->
-    <script type="text/javascript">
-    $('.title-bar').on('sticky.zf.stuckto:top', function() {
-        $(this).addClass('shrink');
-    }).on('sticky.zf.unstuckfrom:top', function() {
-        $(this).removeClass('shrink');
-    });
-    $(window).load(function() {
-        $('a').click(function() {
-            $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top
-            }, 500);
-            return false;
-        });
-    });
-    // something about the video switcher js is throwing an error - fix later
-    $(".video-1, .video-2, .video-3, .video-4, .video-5, .video-6").on("click", function(event) {
-        event.preventDefault();
-        $(".flex-video iframe").prop("src", $(event.currentTarget).attr("href"));
-    });
-    $(".playlist").on('click', '.video_item', function() {
-        // remove classname 'active' from all who already has classname 'active'
-        $(".playlist .video_item.active").removeClass("active");
-        // adding classname 'active' to current click li 
-        $(this).addClass("active");
-    });
-    $(function() {
-        $(document).on('scroll', function() {
-
-            if ($(window).scrollTop() > 100) {
-                $('.scroll-top-wrapper').addClass('show');
-            } else {
-                $('.scroll-top-wrapper').removeClass('show');
-            }
-        });
-
-        $('.scroll-top-wrapper').on('click', scrollToTop);
-    });
-
-    function scrollToTop() {
-        verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
-        element = $('body');
-        offset = element.offset();
-        offsetTop = offset.top;
-        $('html, body').animate({
-            scrollTop: offsetTop
-        }, 500, 'swing');
-    };
-
-
-    // url parser just for fun and the prototype
-    function getQueryVariable(variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=");
-            if (pair[0] == variable) {
-                return pair[1];
-            }
-        }
-        return (false);
-    }
-    $('.search_term').html(getQueryVariable("search"));
-    // $('.grid').masonry({
-    //     // options...
-    //     itemSelector: '.photo_item'
-    // });
-    </script>
-    <script type="text/javascript">
-    $("#navigation").headroom();
-    </script>
+    
 </body>
 
 </html>
