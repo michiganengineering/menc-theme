@@ -14,12 +14,12 @@
     .lead {
         font-family: $header-font-family;
         a {
-            color: $tappan-red;
-            border-bottom: 2px solid transparent;
+            color: $michigan-blue;
+            border-bottom: 1px solid rgba($michigan-blue, .25);
             transition: all .2s ease-in-out;
             &:hover {
-                color: $tappan-red;
-                border-bottom: 2px solid $tappan-red;
+                color: $arboretum-blue;
+                border-bottom: 1px solid $arboretum-blue;
             }
         }
         a[target="_blank"] {
@@ -92,23 +92,23 @@
         #callouts {
             a {
                 font-family: $header-font-family;
-                color: $tappan-red;
-                border-bottom: 2px solid transparent;
+                color: $michigan-blue;
+                border-bottom: 1px solid rgba($michigan-blue, .25);
                 transition: all .2s ease-in-out;
                 &:hover {
-                    color: $tappan-red;
-                    border-bottom: 2px solid $tappan-red;
+                    color: $arboretum-blue;
+                    border-bottom: 1px solid $arboretum-blue;
                 }
             }
         }
         #links {
             a {
-                color: $tappan-red;
-                border-bottom: 2px solid transparent;
+                color: $michigan-blue;
+                border-bottom: 1px solid rgba($michigan-blue, .25);
                 transition: all .2s ease-in-out;
                 &:hover {
-                    color: $tappan-red;
-                    border-bottom: 2px solid $tappan-red;
+                    color: $arboretum-blue;
+                    border-bottom: 1px solid $arboretum-blue;
                 }
             }
             a[target="_blank"] {
@@ -123,12 +123,12 @@
         }
         #typography {
             a {
-                color: $tappan-red;
-                border-bottom: 2px solid transparent;
+                color: $michigan-blue;
+                border-bottom: 1px solid rgba($michigan-blue, .25);
                 transition: all .2s ease-in-out;
                 &:hover {
-                    color: $tappan-red;
-                    border-bottom: 2px solid $tappan-red;
+                    color: $arboretum-blue;
+                    border-bottom: 1px solid $arboretum-blue;
                 }
             }
             .hed {
@@ -166,12 +166,12 @@
         #iconography {
             .lead {
                 a {
-                    color: $tappan-red;
-                    border-bottom: 2px solid transparent;
+                    color: $michigan-blue;
+                    border-bottom: 1px solid rgba($michigan-blue, .25);
                     transition: all .2s ease-in-out;
                     &:hover {
-                        color: $tappan-red;
-                        border-bottom: 2px solid $tappan-red;
+                        color: $arboretum-blue;
+                        border-bottom: 1px solid $arboretum-blue;
                     }
                 }
             }

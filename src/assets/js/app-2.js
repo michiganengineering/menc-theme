@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 44);
+/******/ 	return __webpack_require__(__webpack_require__.s = 39);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9900,7 +9900,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	return jQuery;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)(module)))
 
 /***/ }),
 /* 1 */
@@ -11280,36 +11280,6 @@ exports.Nest = Nest;
 "use strict";
 
 
-module.exports = function (module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function () {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function get() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function get() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -11480,7 +11450,7 @@ Touch.init = function ($) {
 exports.Touch = Touch;
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11864,7 +11834,7 @@ Accordion.defaults = {
 exports.Accordion = Accordion;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12256,7 +12226,7 @@ AccordionMenu.defaults = {
 exports.AccordionMenu = AccordionMenu;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12872,7 +12842,7 @@ Drilldown.defaults = {
 exports.Drilldown = Drilldown;
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13406,7 +13376,7 @@ DropdownMenu.defaults = {
 exports.DropdownMenu = DropdownMenu;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13660,7 +13630,7 @@ Positionable.defaults = {
 exports.Positionable = Positionable;
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13843,7 +13813,7 @@ SmoothScroll.defaults = {
 exports.SmoothScroll = SmoothScroll;
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14397,7 +14367,7 @@ Tabs.defaults = {
 exports.Tabs = Tabs;
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14463,8 +14433,37 @@ function Timer(elem, options, cb) {
 exports.Timer = Timer;
 
 /***/ }),
-/* 20 */,
-/* 21 */
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function () {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function get() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function get() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14474,21 +14473,18 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _whatInput = __webpack_require__(40);
+var _whatInput = __webpack_require__(38);
 
 var _whatInput2 = _interopRequireDefault(_whatInput);
 
-var _foundationSites = __webpack_require__(23);
+var _foundationSites = __webpack_require__(21);
 
 var _foundationSites2 = _interopRequireDefault(_foundationSites);
-
-__webpack_require__(41);
-
-__webpack_require__(42);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.$ = _jquery2.default;
+
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
 //import './lib/foundation-explicit-pieces';
@@ -14497,8 +14493,7 @@ window.$ = _jquery2.default;
 (0, _jquery2.default)(document).foundation();
 
 /***/ }),
-/* 22 */,
-/* 23 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14512,7 +14507,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _foundation = __webpack_require__(25);
+var _foundation = __webpack_require__(23);
 
 var _foundationUtil = __webpack_require__(1);
 
@@ -14528,53 +14523,53 @@ var _foundationUtil6 = __webpack_require__(6);
 
 var _foundationUtil7 = __webpack_require__(9);
 
-var _foundationUtil8 = __webpack_require__(19);
+var _foundationUtil8 = __webpack_require__(18);
 
-var _foundationUtil9 = __webpack_require__(11);
+var _foundationUtil9 = __webpack_require__(10);
 
 var _foundationUtil10 = __webpack_require__(5);
 
-var _foundation2 = __webpack_require__(24);
+var _foundation2 = __webpack_require__(22);
 
-var _foundation3 = __webpack_require__(12);
+var _foundation3 = __webpack_require__(11);
 
-var _foundation4 = __webpack_require__(13);
+var _foundation4 = __webpack_require__(12);
 
-var _foundation5 = __webpack_require__(14);
+var _foundation5 = __webpack_require__(13);
 
-var _foundation6 = __webpack_require__(26);
+var _foundation6 = __webpack_require__(24);
 
-var _foundation7 = __webpack_require__(15);
+var _foundation7 = __webpack_require__(14);
 
-var _foundation8 = __webpack_require__(27);
+var _foundation8 = __webpack_require__(25);
 
-var _foundation9 = __webpack_require__(28);
+var _foundation9 = __webpack_require__(26);
 
-var _foundation10 = __webpack_require__(29);
+var _foundation10 = __webpack_require__(27);
 
-var _foundation11 = __webpack_require__(30);
+var _foundation11 = __webpack_require__(28);
 
-var _foundation12 = __webpack_require__(31);
+var _foundation12 = __webpack_require__(29);
 
-var _foundation13 = __webpack_require__(33);
+var _foundation13 = __webpack_require__(31);
 
-var _foundation14 = __webpack_require__(34);
+var _foundation14 = __webpack_require__(32);
 
-var _foundation15 = __webpack_require__(35);
+var _foundation15 = __webpack_require__(33);
 
-var _foundation16 = __webpack_require__(36);
+var _foundation16 = __webpack_require__(34);
 
-var _foundation17 = __webpack_require__(17);
+var _foundation17 = __webpack_require__(16);
 
-var _foundation18 = __webpack_require__(37);
+var _foundation18 = __webpack_require__(35);
 
-var _foundation19 = __webpack_require__(18);
+var _foundation19 = __webpack_require__(17);
 
-var _foundation20 = __webpack_require__(38);
+var _foundation20 = __webpack_require__(36);
 
-var _foundation21 = __webpack_require__(39);
+var _foundation21 = __webpack_require__(37);
 
-var _foundation22 = __webpack_require__(32);
+var _foundation22 = __webpack_require__(30);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14648,7 +14643,7 @@ _foundation.Foundation.plugin(_foundation22.ResponsiveAccordionTabs, 'Responsive
 exports.default = _foundation.Foundation;
 
 /***/ }),
-/* 24 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15318,7 +15313,7 @@ Abide.defaults = {
 exports.Abide = Abide;
 
 /***/ }),
-/* 25 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15683,7 +15678,7 @@ function hyphenate(str) {
 exports.Foundation = Foundation;
 
 /***/ }),
-/* 26 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15706,7 +15701,7 @@ var _foundationUtil = __webpack_require__(3);
 
 var _foundationUtil2 = __webpack_require__(1);
 
-var _foundation = __webpack_require__(16);
+var _foundation = __webpack_require__(15);
 
 var _foundationUtil3 = __webpack_require__(5);
 
@@ -16157,7 +16152,7 @@ Dropdown.defaults = {
 exports.Dropdown = Dropdown;
 
 /***/ }),
-/* 27 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16564,7 +16559,7 @@ Equalizer.defaults = {
 exports.Equalizer = Equalizer;
 
 /***/ }),
-/* 28 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16836,7 +16831,7 @@ Interchange.SPECIAL_QUERIES = {
 exports.Interchange = Interchange;
 
 /***/ }),
-/* 29 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16857,7 +16852,7 @@ var _foundationUtil = __webpack_require__(1);
 
 var _foundation = __webpack_require__(2);
 
-var _foundation2 = __webpack_require__(17);
+var _foundation2 = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17158,7 +17153,7 @@ Magellan.defaults = {
 exports.Magellan = Magellan;
 
 /***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17789,7 +17784,7 @@ OffCanvas.defaults = {
 exports.OffCanvas = OffCanvas;
 
 /***/ }),
-/* 31 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17810,7 +17805,7 @@ var _foundationUtil = __webpack_require__(3);
 
 var _foundationUtil2 = __webpack_require__(6);
 
-var _foundationUtil3 = __webpack_require__(19);
+var _foundationUtil3 = __webpack_require__(18);
 
 var _foundationUtil4 = __webpack_require__(8);
 
@@ -17818,7 +17813,7 @@ var _foundationUtil5 = __webpack_require__(1);
 
 var _foundation = __webpack_require__(2);
 
-var _foundationUtil6 = __webpack_require__(11);
+var _foundationUtil6 = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18397,7 +18392,7 @@ Orbit.defaults = {
 exports.Orbit = Orbit;
 
 /***/ }),
-/* 32 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18420,9 +18415,9 @@ var _foundationUtil2 = __webpack_require__(1);
 
 var _foundation = __webpack_require__(2);
 
-var _foundation2 = __webpack_require__(12);
+var _foundation2 = __webpack_require__(11);
 
-var _foundation3 = __webpack_require__(18);
+var _foundation3 = __webpack_require__(17);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18693,7 +18688,7 @@ ResponsiveAccordionTabs.defaults = {};
 exports.ResponsiveAccordionTabs = ResponsiveAccordionTabs;
 
 /***/ }),
-/* 33 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18716,11 +18711,11 @@ var _foundationUtil2 = __webpack_require__(1);
 
 var _foundation = __webpack_require__(2);
 
-var _foundation2 = __webpack_require__(15);
+var _foundation2 = __webpack_require__(14);
 
-var _foundation3 = __webpack_require__(14);
+var _foundation3 = __webpack_require__(13);
 
-var _foundation4 = __webpack_require__(13);
+var _foundation4 = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18902,7 +18897,7 @@ ResponsiveMenu.defaults = {};
 exports.ResponsiveMenu = ResponsiveMenu;
 
 /***/ }),
-/* 34 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19110,7 +19105,7 @@ ResponsiveToggle.defaults = {
 exports.ResponsiveToggle = ResponsiveToggle;
 
 /***/ }),
-/* 35 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19760,7 +19755,7 @@ function mobileSniff() {
 exports.Reveal = Reveal;
 
 /***/ }),
-/* 36 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19785,7 +19780,7 @@ var _foundationUtil3 = __webpack_require__(1);
 
 var _foundation = __webpack_require__(2);
 
-var _foundationUtil4 = __webpack_require__(11);
+var _foundationUtil4 = __webpack_require__(10);
 
 var _foundationUtil5 = __webpack_require__(5);
 
@@ -20570,7 +20565,7 @@ function baseLog(base, value) {
 exports.Slider = Slider;
 
 /***/ }),
-/* 37 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21156,7 +21151,7 @@ function emCalc(em) {
 exports.Sticky = Sticky;
 
 /***/ }),
-/* 38 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21358,7 +21353,7 @@ Toggler.defaults = {
 exports.Toggler = Toggler;
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21383,7 +21378,7 @@ var _foundationUtil2 = __webpack_require__(4);
 
 var _foundationUtil3 = __webpack_require__(5);
 
-var _foundation = __webpack_require__(16);
+var _foundation = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21876,7 +21871,7 @@ Tooltip.defaults = {
 exports.Tooltip = Tooltip;
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22264,392 +22259,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	);
 });
 ;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)(module)))
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Navigation slide up
-var headroom = new Headroom(document.querySelector("#navigation"), {
-  "offset": 0,
-  "tolerance": 1,
-  "classes": {
-    "initial": "animated",
-    "pinned": "slideDown",
-    "unpinned": "slideUp"
-  }
-});
-headroom.init();
-
-// Navigation dropdown closes when scrolling
-(0, _jquery2.default)(window).scroll(function () {
-  var scroll = (0, _jquery2.default)(window).scrollTop();
-  if (scroll >= 100) {
-    (0, _jquery2.default)(".dropdown-pane").removeClass("is-open");
-    (0, _jquery2.default)(".menu_controls").removeClass("hover");
-    (0, _jquery2.default)(".hamburger").removeClass("hover");
-  }
-});
-
-// Initialize wow.js
-if (typeof WOW == 'function') {
-  new WOW().init();
-}
-
-// scroll-to-top button
-var headroom = new Headroom(document.querySelector(".scroll-top-wrapper"), {});
-headroom.init();
-
-(0, _jquery2.default)(".scroll-top-wrapper").click(function () {
-  (0, _jquery2.default)("html, body").animate({ scrollTop: 0 }, "swing");
-  return false;
-});
-
-// // Masonry on photo category pages
-// if (typeof masonry == 'function') {
-//   $('.grid').masonry({
-//     // options...
-//     itemSelector: '.photo_item'
-//   });
-// }
-
-(0, _jquery2.default)(function () {
-  (0, _jquery2.default)("#video-1, #video-2, #video-3").on("click", function (event) {
-    event.preventDefault();
-    (0, _jquery2.default)(".responsive-embed iframe").prop("src", (0, _jquery2.default)(event.currentTarget).attr("href"));
-  });
-  (0, _jquery2.default)(".playlist").on('click', '.video_item', function () {
-    // remove classname 'active' from all who already has classname 'active'
-    (0, _jquery2.default)(".playlist .video_item.active").removeClass("active");
-    // adding classname 'active' to current click li
-    (0, _jquery2.default)(this).addClass("active");
-  });
-});
-
-// Video category page playlist switcher
-(0, _jquery2.default)("#video-1, #video-2, #video-3, #video-4, #video-5, #video-6").on("click", function (event) {
-  event.preventDefault();
-  (0, _jquery2.default)(".responsive-embed #main_video").prop("src", (0, _jquery2.default)(event.currentTarget).attr("href"));
-});
-(0, _jquery2.default)(".playlist").on('click', '.video_item', function () {
-  // remove classname 'active' from all who already has classname 'active'
-  (0, _jquery2.default)(".playlist .video_item.active").removeClass("active");
-  // adding classname 'active' to current click li
-  (0, _jquery2.default)(this).addClass("active");
-});
-
-// var $el = $('#bottom');
-// var bottom = $el.position().top + $el.outerHeight(true);
-// var getMax = function() {
-//     return $el.position().top + $el.outerHeight(true);
-// }
-
-// var getValue = function() {
-//     return $(window).scrollTop();
-// }
-
-// if ('max' in document.createElement('progress')) {
-//     // Browser supports progress element
-//     var progressBar = $('progress');
-
-//     // Set the Max attr for the first time
-//     progressBar.attr({
-//         max: getMax()
-//     });
-
-//     $(document).on('scroll', function() {
-//         // On scroll only Value attr needs to be calculated
-//         progressBar.attr({
-//             value: getValue()
-//         });
-//     });
-
-//     $(window).resize(function() {
-//         // On resize, both Max/Value attr needs to be calculated
-//         progressBar.attr({
-//             max: getMax(),
-//             value: getValue()
-//         });
-//     });
-// } else {
-//     var progressBar = $('.progress-bar'),
-//         max = getMax(),
-//         value, width;
-
-//     var getWidth = function() {
-//         // Calculate width in percentage
-//         value = getValue();
-//         width = (value / max) * 100;
-//         width = width + '%';
-//         return width;
-//     }
-
-//     var setWidth = function() {
-//         progressBar.css({
-//             width: getWidth()
-//         });
-//     }
-
-//     $(document).on('scroll', setWidth);
-//     $(window).on('resize', function() {
-//         // Need to reset the Max attr
-//         max = getMax();
-//         setWidth();
-//     });
-// }
-
-// // Social Sticky
-// function sticky_relocate() {
-
-//     var window_top = jQuery(this).scrollTop();
-//     var div_top = jQuery('#side_sticky').offset().top;
-//     var footer_top = jQuery('#bottom').offset().top + (-500);
-
-//     if (window_top > div_top) {
-//         jQuery('#side_sticky').addClass('fade');
-//     } else {
-//         jQuery('#side_sticky').removeClass('fade');
-//     }
-//     if (window_top > footer_top) {
-//         jQuery('#side_sticky').addClass('fade');
-//     }
-
-// }
-// jQuery(function() {
-//     jQuery(window).scroll(sticky_relocate);
-//     sticky_relocate();
-// });
-
-// $(window).resize(function() {
-//     console.log('resize called');
-//     var width = $(window).width();
-//     if (width >= 320 && width <= 1405) {
-//         $('#side_sticky #menu').removeClass('vertical').addClass('expanded');
-//     } else {
-//         $('#side_sticky #menu').removeClass('expanded').addClass('vertical');
-//     }
-// }).resize();
-
-// var headroom = new Headroom(document.querySelector("#side_sticky"), {
-//   "tolerance": 1
-// });
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/*! WOW - v1.1.3 - 2016-05-06
- * Copyright (c) 2016 Matthieu Aussaguel;*/
-(function () {
-    var a,
-        b,
-        c,
-        d,
-        e,
-        f = function f(a, b) {
-        return function () {
-            return a.apply(b, arguments);
-        };
-    },
-        g = [].indexOf || function (a) {
-        for (var b = 0, c = this.length; c > b; b++) {
-            if (b in this && this[b] === a) return b;
-        }return -1;
-    };
-    b = function () {
-        function a() {}
-        return a.prototype.extend = function (a, b) {
-            var c, d;
-            for (c in b) {
-                d = b[c], null == a[c] && (a[c] = d);
-            }return a;
-        }, a.prototype.isMobile = function (a) {
-            return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(a)
-            );
-        }, a.prototype.createEvent = function (a, b, c, d) {
-            var e;
-            return null == b && (b = !1), null == c && (c = !1), null == d && (d = null), null != document.createEvent ? (e = document.createEvent("CustomEvent"), e.initCustomEvent(a, b, c, d)) : null != document.createEventObject ? (e = document.createEventObject(), e.eventType = a) : e.eventName = a, e;
-        }, a.prototype.emitEvent = function (a, b) {
-            return null != a.dispatchEvent ? a.dispatchEvent(b) : b in (null != a) ? a[b]() : "on" + b in (null != a) ? a["on" + b]() : void 0;
-        }, a.prototype.addEvent = function (a, b, c) {
-            return null != a.addEventListener ? a.addEventListener(b, c, !1) : null != a.attachEvent ? a.attachEvent("on" + b, c) : a[b] = c;
-        }, a.prototype.removeEvent = function (a, b, c) {
-            return null != a.removeEventListener ? a.removeEventListener(b, c, !1) : null != a.detachEvent ? a.detachEvent("on" + b, c) : delete a[b];
-        }, a.prototype.innerHeight = function () {
-            return "innerHeight" in window ? window.innerHeight : document.documentElement.clientHeight;
-        }, a;
-    }(), c = this.WeakMap || this.MozWeakMap || (c = function () {
-        function a() {
-            this.keys = [], this.values = [];
-        }
-        return a.prototype.get = function (a) {
-            var b, c, d, e, f;
-            for (f = this.keys, b = d = 0, e = f.length; e > d; b = ++d) {
-                if (c = f[b], c === a) return this.values[b];
-            }
-        }, a.prototype.set = function (a, b) {
-            var c, d, e, f, g;
-            for (g = this.keys, c = e = 0, f = g.length; f > e; c = ++e) {
-                if (d = g[c], d === a) return void (this.values[c] = b);
-            }return this.keys.push(a), this.values.push(b);
-        }, a;
-    }()), a = this.MutationObserver || this.WebkitMutationObserver || this.MozMutationObserver || (a = function () {
-        function a() {
-            "undefined" != typeof console && null !== console && console.warn("MutationObserver is not supported by your browser."), "undefined" != typeof console && null !== console && console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content.");
-        }
-        return a.notSupported = !0, a.prototype.observe = function () {}, a;
-    }()), d = this.getComputedStyle || function (a, b) {
-        return this.getPropertyValue = function (b) {
-            var c;
-            return "float" === b && (b = "styleFloat"), e.test(b) && b.replace(e, function (a, b) {
-                return b.toUpperCase();
-            }), (null != (c = a.currentStyle) ? c[b] : void 0) || null;
-        }, this;
-    }, e = /(\-([a-z]){1})/g, this.WOW = function () {
-        function e(a) {
-            null == a && (a = {}), this.scrollCallback = f(this.scrollCallback, this), this.scrollHandler = f(this.scrollHandler, this), this.resetAnimation = f(this.resetAnimation, this), this.start = f(this.start, this), this.scrolled = !0, this.config = this.util().extend(a, this.defaults), null != a.scrollContainer && (this.config.scrollContainer = document.querySelector(a.scrollContainer)), this.animationNameCache = new c(), this.wowEvent = this.util().createEvent(this.config.boxClass);
-        }
-        return e.prototype.defaults = { boxClass: "wow", animateClass: "animated", offset: 0, mobile: !0, live: !0, callback: null, scrollContainer: null }, e.prototype.init = function () {
-            var a;
-            return this.element = window.document.documentElement, "interactive" === (a = document.readyState) || "complete" === a ? this.start() : this.util().addEvent(document, "DOMContentLoaded", this.start), this.finished = [];
-        }, e.prototype.start = function () {
-            var b, c, d, e;
-            if (this.stopped = !1, this.boxes = function () {
-                var a, c, d, e;
-                for (d = this.element.querySelectorAll("." + this.config.boxClass), e = [], a = 0, c = d.length; c > a; a++) {
-                    b = d[a], e.push(b);
-                }return e;
-            }.call(this), this.all = function () {
-                var a, c, d, e;
-                for (d = this.boxes, e = [], a = 0, c = d.length; c > a; a++) {
-                    b = d[a], e.push(b);
-                }return e;
-            }.call(this), this.boxes.length) if (this.disabled()) this.resetStyle();else for (e = this.boxes, c = 0, d = e.length; d > c; c++) {
-                b = e[c], this.applyStyle(b, !0);
-            }return this.disabled() || (this.util().addEvent(this.config.scrollContainer || window, "scroll", this.scrollHandler), this.util().addEvent(window, "resize", this.scrollHandler), this.interval = setInterval(this.scrollCallback, 50)), this.config.live ? new a(function (a) {
-                return function (b) {
-                    var c, d, e, f, g;
-                    for (g = [], c = 0, d = b.length; d > c; c++) {
-                        f = b[c], g.push(function () {
-                            var a, b, c, d;
-                            for (c = f.addedNodes || [], d = [], a = 0, b = c.length; b > a; a++) {
-                                e = c[a], d.push(this.doSync(e));
-                            }return d;
-                        }.call(a));
-                    }return g;
-                };
-            }(this)).observe(document.body, { childList: !0, subtree: !0 }) : void 0;
-        }, e.prototype.stop = function () {
-            return this.stopped = !0, this.util().removeEvent(this.config.scrollContainer || window, "scroll", this.scrollHandler), this.util().removeEvent(window, "resize", this.scrollHandler), null != this.interval ? clearInterval(this.interval) : void 0;
-        }, e.prototype.sync = function (b) {
-            return a.notSupported ? this.doSync(this.element) : void 0;
-        }, e.prototype.doSync = function (a) {
-            var b, c, d, e, f;
-            if (null == a && (a = this.element), 1 === a.nodeType) {
-                for (a = a.parentNode || a, e = a.querySelectorAll("." + this.config.boxClass), f = [], c = 0, d = e.length; d > c; c++) {
-                    b = e[c], g.call(this.all, b) < 0 ? (this.boxes.push(b), this.all.push(b), this.stopped || this.disabled() ? this.resetStyle() : this.applyStyle(b, !0), f.push(this.scrolled = !0)) : f.push(void 0);
-                }return f;
-            }
-        }, e.prototype.show = function (a) {
-            return this.applyStyle(a), a.className = a.className + " " + this.config.animateClass, null != this.config.callback && this.config.callback(a), this.util().emitEvent(a, this.wowEvent), this.util().addEvent(a, "animationend", this.resetAnimation), this.util().addEvent(a, "oanimationend", this.resetAnimation), this.util().addEvent(a, "webkitAnimationEnd", this.resetAnimation), this.util().addEvent(a, "MSAnimationEnd", this.resetAnimation), a;
-        }, e.prototype.applyStyle = function (a, b) {
-            var c, d, e;
-            return d = a.getAttribute("data-wow-duration"), c = a.getAttribute("data-wow-delay"), e = a.getAttribute("data-wow-iteration"), this.animate(function (f) {
-                return function () {
-                    return f.customStyle(a, b, d, c, e);
-                };
-            }(this));
-        }, e.prototype.animate = function () {
-            return "requestAnimationFrame" in window ? function (a) {
-                return window.requestAnimationFrame(a);
-            } : function (a) {
-                return a();
-            };
-        }(), e.prototype.resetStyle = function () {
-            var a, b, c, d, e;
-            for (d = this.boxes, e = [], b = 0, c = d.length; c > b; b++) {
-                a = d[b], e.push(a.style.visibility = "visible");
-            }return e;
-        }, e.prototype.resetAnimation = function (a) {
-            var b;
-            return a.type.toLowerCase().indexOf("animationend") >= 0 ? (b = a.target || a.srcElement, b.className = b.className.replace(this.config.animateClass, "").trim()) : void 0;
-        }, e.prototype.customStyle = function (a, b, c, d, e) {
-            return b && this.cacheAnimationName(a), a.style.visibility = b ? "hidden" : "visible", c && this.vendorSet(a.style, { animationDuration: c }), d && this.vendorSet(a.style, { animationDelay: d }), e && this.vendorSet(a.style, { animationIterationCount: e }), this.vendorSet(a.style, { animationName: b ? "none" : this.cachedAnimationName(a) }), a;
-        }, e.prototype.vendors = ["moz", "webkit"], e.prototype.vendorSet = function (a, b) {
-            var c, d, e, f;
-            d = [];
-            for (c in b) {
-                e = b[c], a["" + c] = e, d.push(function () {
-                    var b, d, g, h;
-                    for (g = this.vendors, h = [], b = 0, d = g.length; d > b; b++) {
-                        f = g[b], h.push(a["" + f + c.charAt(0).toUpperCase() + c.substr(1)] = e);
-                    }return h;
-                }.call(this));
-            }return d;
-        }, e.prototype.vendorCSS = function (a, b) {
-            var c, e, f, g, h, i;
-            for (h = d(a), g = h.getPropertyCSSValue(b), f = this.vendors, c = 0, e = f.length; e > c; c++) {
-                i = f[c], g = g || h.getPropertyCSSValue("-" + i + "-" + b);
-            }return g;
-        }, e.prototype.animationName = function (a) {
-            var b;
-            try {
-                b = this.vendorCSS(a, "animation-name").cssText;
-            } catch (c) {
-                b = d(a).getPropertyValue("animation-name");
-            }
-            return "none" === b ? "" : b;
-        }, e.prototype.cacheAnimationName = function (a) {
-            return this.animationNameCache.set(a, this.animationName(a));
-        }, e.prototype.cachedAnimationName = function (a) {
-            return this.animationNameCache.get(a);
-        }, e.prototype.scrollHandler = function () {
-            return this.scrolled = !0;
-        }, e.prototype.scrollCallback = function () {
-            var a;
-            return !this.scrolled || (this.scrolled = !1, this.boxes = function () {
-                var b, c, d, e;
-                for (d = this.boxes, e = [], b = 0, c = d.length; c > b; b++) {
-                    a = d[b], a && (this.isVisible(a) ? this.show(a) : e.push(a));
-                }return e;
-            }.call(this), this.boxes.length || this.config.live) ? void 0 : this.stop();
-        }, e.prototype.offsetTop = function (a) {
-            for (var b; void 0 === a.offsetTop;) {
-                a = a.parentNode;
-            }for (b = a.offsetTop; a = a.offsetParent;) {
-                b += a.offsetTop;
-            }return b;
-        }, e.prototype.isVisible = function (a) {
-            var b, c, d, e, f;
-            return c = a.getAttribute("data-wow-offset") || this.config.offset, f = this.config.scrollContainer && this.config.scrollContainer.scrollTop || window.pageYOffset, e = f + Math.min(this.element.clientHeight, this.util().innerHeight()) - c, d = this.offsetTop(a), b = d + a.clientHeight, e >= d && b >= f;
-        }, e.prototype.util = function () {
-            return null != this._util ? this._util : this._util = new b();
-        }, e.prototype.disabled = function () {
-            return !this.config.mobile && this.util().isMobile(navigator.userAgent);
-        }, e;
-    }();
-}).call(window);
-new WOW().init();
-
-/***/ }),
-/* 43 */,
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(21);
+module.exports = __webpack_require__(20);
 
 
 /***/ })
