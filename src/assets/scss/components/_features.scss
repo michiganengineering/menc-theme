@@ -14,25 +14,56 @@
         background-color: $black-54;
         padding: $global-padding;
         transition: all .2s ease-in-out;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 3px;
+            background-color: $michigan-maize;
+            transition: .35s;
+        }
         @include breakpoint(medium down) {
             position: static;
-            background-color: $black-100;
+            background-color: transparent;
+            width: 100%;
+            padding: 0;
             transition: all .2s ease-in-out;
-        }
-        &:hover {
-            background-color: $black-87;
-            @include breakpoint(medium down) {
-                background-color: $black-100;
+            &:after {
+                display: none;
             }
         }
         .hed {
             font-family: 'bebas_neuebold';
-            font-size: 6em;
+            font-size: 3em;
             margin: 0;
             line-height: 1;
+            @include breakpoint(medium down) {
+                font-family: 'Open Sans';
+                color: $black;
+                padding-top: 1rem;
+            }
+            @include breakpoint(small only) {
+                font-size: 2rem;
+            }
+            &:after {
+                content: '';
+            }
         }
         .dek {
             margin: 0;
+        }
+    }
+    &:hover {
+        .overlay {
+            background-color: $black-87;
+            &:after {
+                width: 100%;
+            }
+            @include breakpoint(medium down) {
+                background-color: transparent;
+            }
         }
     }
     .listing {
@@ -60,15 +91,48 @@
             padding: .25rem .5rem;
             margin-left: 1.5rem;
             color: $white;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 100%;
+                background-color: rgba($white, .1);
+                transition: .35s;
+            }
+            &:hover {
+                color: $white-100;
+                &:before {
+                    width: 100%;
+                }
+            }
         }
         .indepth_item {
             margin: 1rem 0;
             padding-bottom: 1rem;
             border-bottom: 1px dashed $light-gray;
+            position: relative;
             .hed {
                 font-family: 'Open Sans';
                 font-weight: 900;
                 font-size: 1.4rem;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                width: 0;
+                height: 1px;
+                background-color: $medium-gray;
+                transition: .35s;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
             }
         }
         .features_cta {
