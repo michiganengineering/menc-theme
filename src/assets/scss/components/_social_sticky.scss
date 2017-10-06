@@ -1,0 +1,142 @@
+.no-js {
+    .social_sticky {
+        opacity: 0;
+    }
+}
+
+.social_sticky {
+    position: fixed;
+    clear: both;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    background-color: $faintest-gray;
+    border-top: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.02);
+    opacity: .9;
+    transition: all .1s ease-in-out;
+    @include breakpoint(large down) {
+        top: inherit;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0%);
+        border-top: 1px solid $light-gray;
+        border-left: 1px solid $light-gray;
+        border-right: 1px solid $light-gray;
+        border-bottom: 0;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom-right-radius: 0;
+        box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.1), 0 -1px 10px rgba(0, 0, 0, 0.02);
+        z-index: 9;
+        opacity: 1;
+        &.headroom {
+            will-change: transform;
+            transition: transform 200ms ease-in-out;
+            &--pinned {
+                transform: translate(-50%, 0%);
+            }
+            &--unpinned {
+                transform: translate(-50%, 100%);
+            }
+        }
+    }
+    @include breakpoint(small only) {
+        width: 80%;
+    }
+    &:hover {
+        opacity: 1;
+        .menu {
+            li {
+                &.title {
+                    color: $darker-gray;
+                }
+                a {
+                    &.fa-facebook {
+                        color: rgba($facebook, .65);
+                    }
+                    &.fa-twitter {
+                        color: rgba($twitter, .65);
+                    }
+                    &.fa-reddit-alien {
+                        color: rgba($reddit, .65);
+                    }
+                    &.fa-tumblr {
+                        color: rgba($tumblr, .65);
+                    }
+                    &.fa-pinterest-p {
+                        color: rgba($pinterest, .65);
+                    }
+                    &.fa-envelope {
+                        color: rgba($a2-amethyst, .65);
+                    }
+                }
+            }
+        }
+    }
+    &.fade {
+        opacity: 0;
+        transition: opacity .5s ease-out;
+        z-index: -999;
+    }
+    .menu {
+        display: block;
+        transition: all .2s ease-in-out;
+        @include breakpoint(large down) {
+            display: table;
+        }
+        li {
+            &.title {
+                font-family: 'Open Sans';
+                font-size: .85rem;
+                font-weight: 700;
+                color: $darker-gray;
+                padding: .5rem .5rem 0;
+                @include breakpoint(large down) {
+                    padding: .5rem;
+                }
+            }
+            a {
+                width: 100%;
+                justify-content: center !important;
+                color: $darker-gray;
+                padding: 0.7rem .25rem;
+                transition: all .2s ease-in-out;
+                @include breakpoint(large down) {
+                    padding: 0.7rem 1rem;
+                }
+                @include breakpoint(small only) {
+                    padding: 0.7rem;
+                }
+                &:hover {
+                    background-color: $lightest-gray;
+                }
+                &.fa-facebook:hover {
+                    color: $facebook;
+                }
+                &.fa-twitter:hover {
+                    color: $twitter;
+                }
+                &.fa-reddit-alien:hover {
+                    color: $reddit;
+                }
+                &.fa-tumblr:hover {
+                    color: $tumblr;
+                }
+                &.fa-pinterest-p:hover {
+                    color: $pinterest;
+                }
+                &.fa-envelope:hover {
+                    color: $a2-amethyst;
+                }
+            }
+            @include breakpoint(large down) {
+                float: left;
+            }
+        }
+    }
+}

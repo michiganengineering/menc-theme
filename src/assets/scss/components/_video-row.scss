@@ -28,6 +28,7 @@
             margin: 1rem 0;
             padding-bottom: 1rem;
             border-bottom: 1px dashed $light-gray;
+            position: relative;
             @include breakpoint(medium only) {
                 margin: .5rem 0;
                 padding-bottom: .5rem;
@@ -40,6 +41,21 @@
                     &:hover {
                         color: $arboretum-blue;
                     }
+                }
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                width: 0;
+                height: 1px;
+                background-color: $medium-gray;
+                transition: .35s;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
                 }
             }
             a {
@@ -82,7 +98,7 @@
         padding-left: 0;
         border-left: 2px solid $michigan-maize;
     }
-    .flex-video {
+    .responsive-embed {
         margin-bottom: 0;
     }
 }

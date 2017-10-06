@@ -1,247 +1,89 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Guide</title>
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+    <script src="https://use.fontawesome.com/68aaaab0d2.js"></script>
+</head>
 
-    <!-- Style guide-specific CSS goes here. -->
-    <style>
-    /* This styles individual sections of the style guide */
-    .ss-section:not(:last-child) {
-      padding-bottom: 4rem;
-      border-bottom: 2px solid #ccc;
-      margin-bottom: 4rem;
-    }
-
-    /* This styles code blocks used for examples. */
-    .ss-code code {
-      display: block;
-      padding: 1rem;
-      overflow-x: scroll;
-      margin-bottom: 1.5rem;
-    }
-
-    /* This styles the example rows used in the grid documentation. */
-    .row.display {
-      background: #eee;
-      font-size: 11px;
-      margin-bottom: 10px;
-      line-height: 2rem;
-      border: solid 1px #c6c6c6;
-      margin-left: 0 !important;
-      margin-right: 0 !important; }
-      .row.display .columns:nth-child(2), .row.display .columns.small-centered, .row.display .columns.large-centered {
-        background: #e1e1e1; }
-      .row.display .columns.color-end {
-        background: #d4d4d4; }
-
-    /* This styles the color blocks used in the color documentation. */
-    .color-block {
-      border-radius: 2px;
-      display: block;
-      padding: 8px 8px 6px;
-      color: #333;
-      text-transform: uppercase;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-      .color-block span {
-        display: block;
-        width: 100%;
-        height: 100px;
-        margin-bottom: 0.42857rem;
-      }
-    </style>
-  </head>
-  <body>
-
+<body class="styleguide">
+    <header class="row expanded">
+        <div class="logo column small-8 large-3"><img src="assets/img/CoE-horiz-rev.svg" alt=""></div>
+    </header>
+    <div class="column row title">
+        <h1>The Michigan Engineer News Center Theme Style Guide</h1>
+    </div>
     <div class="column row">
-      <h1>Client Style Guide</h1>
-      <p class="lead">This style guide was built with Foundation for Sites. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
-      <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
-      <a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a>
-      <a href="http://foundation.zurb.com/business/business-support.html" class="secondary button">Technical Support</a>
-    </div>
+        <div class="row align-justify">
+            <div class="small-12 medium-3 large-2 columns">
+                <div class="container" data-sticky-container>
+                    <nav data-sticky data-anchor="main" data-sticky-on="large">
+                        <ul class="vertical menu sidebar" data-magellan>
+                            <li class="sidebar-title"><span>Innovation</span></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#about">About</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#accessibility">Accessibility</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#breadcrumbs">Breadcrumbs</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#buttons">Buttons</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#callouts">Callouts</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#cards">Cards</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#colors">Colors</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#the-grid">The Grid</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#iconography">Iconography</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#images">Images</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#labels">Labels</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#links">Links</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#tooltips">Tooltips</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#tables">Tables</a></li>
+                            <li><a data-smooth-scroll data-animation-easing="swing" href="#typography">Typography</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="small-12 medium-8 large-9 columns main" id="main">
+                <section class="ss-section" id="about" data-magellan-target="about">
+                    <h1>About</h1><p class="lead">This style guide is intended for the CoE department child theme: Innovation. It is generated and maintained by the <a href="https://cm.engin.umich.edu/" target="_blank">Michigan Engineering Office of Communications &amp; Marketing</a>.</p>
+                </section>
+                <section class="ss-section" id="accessibility" data-magellan-target="accessibility">
+                    <h1>Accessibility</h1><p class="lead">In addition to the accessibility features built into the theme&#39;s components, be sure to follow best practices for making your site more accessible. <i>this will be added to in more detail as they&#39;re worked out</i></p> 
 
-    <div class="column row"><div class="row collapse">
+<ul>
+<li>Structure your document properly. Use the right HTML tags for the job when marking up navigation, lists, links, controls, and so on.</li>
+<li>Label everything. If a control or form element has no text label, add one. You can use the visibility classes to hide labels visually while maintaining accessibility. Use the alt attribute on all images to describe what they are.</li>
+<li>Don&#39;t rely on purely visual cues. The content of a page should make sense even if page is being read to the user, or if the user is colorblind and can&#39;t make use of color-based labeling.</li>
+<li><p>Make everything usable on a keyboard and mouse. All of our components work with keyboards, mice, and touch screens out of the box.</p>
+</li>
+<li><p><a href="http://webaccess.hr.umich.edu/">http://webaccess.hr.umich.edu/</a></p>
+</li>
+<li><a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/">https://www.w3.org/TR/2008/REC-WCAG20-20081211/</a></li>
+</ul>
 
-      <div class="large-3 medium-4 columns" data-sticky-container>
-        <ul class="vertical menu">
-            <li><a href="#the-grid">The Grid</a></li>
-            <li><a href="#colors">Colors</a></li>
-            <li><a href="#typography">Typography</a></li>
-            <li><a href="#buttons">Buttons</a></li>
-            <li><a href="#forms">Forms</a></li>
-            <li><a href="#new-section">New Section</a></li>
-        </ul>
-      </div>
+                </section>
+                <section class="ss-section" id="breadcrumbs" data-magellan-target="breadcrumbs">
+                    <h1>Breadcrumbs</h1><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"You are here:"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"breadcrumbs"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"home"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Features<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Current: <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> Cloning<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></code></pre></div>
 
-      <div class="large-9 medium-8 columns">
-          <section class="ss-section" id="the-grid">
-            <h1>The Grid</h1><p class="lead">Problem: You&#39;ve got tons of content, each needing different sized cells, and don&#39;t know how to quick and easily get it all done. Solution: The awesome XY grid!</p>
-
-<hr>
-<h2>Overview</h2><p>The grid is built around two key elements: grid-x and cells. grid-container create a max-width and contain the grid, and cells create the final structure. Everything on your page that you don&#39;t give a specific structural style to should be within a grid-x or cell.</p>
-<hr>
-<h2>Nesting</h2><p>In the Grid you can nest cells down as far as you&#39;d like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.</p>
-<hr>
-<h2>How to Use</h2><p>Using this framework is easy. Here&#39;s how your code will look when you use a series of <code>&lt;div&gt;</code> tags to create cells.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-4 large-3 cell"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-8 large-9 cell"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="grid-x display">
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-4 cell">4</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-3 cell">3</div>
-  <div class="small-12 large-6 cell">6</div>
-  <div class="small-12 large-3 cell">3</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-2 cell">2</div>
-  <div class="small-12 large-8 cell">8</div>
-  <div class="small-12 large-2 cell">2</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-3 cell">3</div>
-  <div class="small-12 large-9 cell">9</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-8 cell">8</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-5 cell">5</div>
-  <div class="small-12 large-7 cell">7</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-6 cell">6</div>
-  <div class="small-12 large-6 cell">6</div>
-</div>
-
-<hr>
-<h2>Nesting grid-x</h2><p>In the Grid you can nest cells down as far as you&#39;d like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 cell"</span>&gt;</span>8
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 cell"</span>&gt;</span>8 Nested
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 cell"</span>&gt;</span>8 Nested Again<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 cell"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 cell"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 cell"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="grid-x display">
-  <div class="small-8 cell">8
-    <div class="grid-x">
-      <div class="small-8 cell">8 Nested
-        <div class="grid-x">
-          <div class="small-8 cell">8 Nested Again</div>
-          <div class="small-4 cell">4</div>
-        </div>
-      </div>
-      <div class="small-4 cell">4</div>
-    </div>
-  </div>
-  <div class="small-4 cellgi">4</div>
-</div>
+<div class="ss-code-live"><nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a class="home" href="#">Home</a></li>
+    <li><a href="#">Features</a></li>
+    <li><span class="show-for-sr">Current: </span> Cloning</li>
+  </ul>
+</nav></div>
+                </section>
+                <section class="ss-section" id="buttons" data-magellan-target="buttons">
+                    <h1>Buttons</h1><p class="lead">Buttons are tied to an action of some kind.</p>
 
 <hr>
-<h2>Small Grid</h2><p>As you&#39;ve probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-2 cell"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-10 cell"</span>&gt;</span>10, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-3 cell"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-9 cell"</span>&gt;</span>9, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="grid-x display">
-  <div class="small-2 cell">2</div>
-  <div class="small-10 cell">10, last</div>
-</div>
-<div class="grid-x display">
-  <div class="small-3 cell">3</div>
-  <div class="small-9 cell">9, last</div>
-</div>
-          </section>
-          <section class="ss-section" id="colors">
-            <h1>Colors</h1><p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>_settings.scss</code></p>
-
-<hr>
-<div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #2199e8"></span>
-      #2199e8
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #3adb76"></span>
-      #3adb76
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #ffae00"></span>
-      #ffae00
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #ec5840"></span>
-      #ec5840
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #0a0a0a"></span>
-      #0a0a0a
-    </div>
-  </div>
-</div>
-          </section>
-          <section class="ss-section" id="typography">
-            <h1>Typography</h1><p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
-
-<hr>
-<h2>Headings</h2><p>Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest)</p>
-<hr>
-<h2>Paragraphs</h2><p>Paragraphs are groups of sentences, each with a lead (first sentence) and transition (last sentence). They are block level elements, meaning they stack vertically when repeated. Use them as such.</p>
-<hr>
-<h1>Heading Level 1</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h2>Heading Level 2</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h3>Heading Level 3</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h4>Heading Level 4</h4>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h5>Heading Level 5</h5>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-<h6>Heading Level 6</h6>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
-
-          </section>
-          <section class="ss-section" id="buttons">
-            <h1>Buttons</h1><p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you&#39;re strapped to. On the web, we follow similar conventions.</p>
-
-<hr>
-<h2>Primary Buttons</h2><p>These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the <code>.tiny</code>, <code>.small</code>, and <code>.large</code> classes.</p>
+<h3>Primary Buttons</h3><p>These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the <code>.tiny</code>, <code>.small</code>, and <code>.large</code> classes.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary large button"</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary button"</span>&gt;</span>Regular button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"primary small button"</span>&gt;</span>Small button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -251,7 +93,7 @@
 <a href="#" class="primary button">Regular button</a>
 <a href="#" class="primary small button">Small button</a>
 <a href="#" class="primary tiny button">Tiny button</a></div><hr>
-<h2>Secondary Buttons</h2><p>These buttons are used for less important, secondary actions on a page.</p>
+<h3>Secondary Buttons</h3><p>These buttons are used for less important, secondary actions on a page.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary large button"</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary button"</span>&gt;</span>Regular button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary small button"</span>&gt;</span>Small button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -260,155 +102,791 @@
 <div class="ss-code-live"><a href="#" class="secondary large button">Large button</a>
 <a href="#" class="secondary button">Regular button</a>
 <a href="#" class="secondary small button">Small button</a>
-<a href="#" class="secondary tiny button">Tiny button</a></div>
-          </section>
-          <section class="ss-section" id="forms">
-            <h1>Forms</h1><p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
+<a href="#" class="secondary tiny button">Tiny button</a></div><p>--</p>
+<h3>Other Button Colors</h3><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success large button"</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert button"</span>&gt;</span>Regular button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning small button"</span>&gt;</span>Small button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><a href="#" class="success large button">Large button</a>
+<a href="#" class="alert button">Regular button</a>
+<a href="#" class="warning small button">Small button</a></div>
+                </section>
+                <section class="ss-section" id="callouts" data-magellan-target="callouts">
+                    <h1>Callouts</h1><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is a default callout.<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>It has an easy to override visual style, and is appropriately subdued.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>It's dangerous to go alone, take this.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout primary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is a primary callout<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>It has an easy to override visual style, and is appropriately subdued.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>It's dangerous to go alone, take this.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout secondary"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is a secondary callout<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>It has an easy to override visual style, and is appropriately subdued.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>It's dangerous to go alone, take this.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout success"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is a success callout<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>It has an easy to override visual style, and is appropriately subdued.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>It's dangerous to go alone, take this.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout warning"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is a warning callout<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>It has an easy to override visual style, and is appropriately subdued.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>It's dangerous to go alone, take this.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"callout alert"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is an alert callout<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>It has an easy to override visual style, and is appropriately subdued.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>It's dangerous to go alone, take this.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="callout">
+    <h5>This is a default callout.</h5>
+    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    <a href="#">It's dangerous to go alone, take this.</a>
+</div>
+<div class="callout primary">
+    <h5>This is a primary callout</h5>
+    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    <a href="#">It's dangerous to go alone, take this.</a>
+</div>
+<div class="callout secondary">
+    <h5>This is a secondary callout</h5>
+    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    <a href="#">It's dangerous to go alone, take this.</a>
+</div>
+<div class="callout success">
+    <h5>This is a success callout</h5>
+    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    <a href="#">It's dangerous to go alone, take this.</a>
+</div>
+<div class="callout warning">
+    <h5>This is a warning callout</h5>
+    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    <a href="#">It's dangerous to go alone, take this.</a>
+</div>
+<div class="callout alert">
+    <h5>This is an alert callout</h5>
+    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+    <a href="#">It's dangerous to go alone, take this.</a>
+</div></div>
+                </section>
+                <section class="ss-section" id="cards" data-magellan-target="cards">
+                    <h1>Cards</h1><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row small-up-1 medium-up-3 large-up-3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/aud-01.jpg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-section"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Dreams feel real<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>I'm going to improvise. Listen, there's something you should know about me... about inception.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Last updated 1 minute ago<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/aud-02.jpg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-section"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Menus<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Cards play nicely with menus too! Give them a try.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu simple"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Three<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-divider"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Featured<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-section"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Your title here!<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/aud-03.jpg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-section"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Buttons!<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Who doesn't love a good button? Buttons work in all of their forms too.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>I'm a button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/aud-04.jpg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-section"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>And button groups...<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Button groups also work great!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-group"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Three<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card text-center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-divider"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Centered<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"assets/img/aud-01.jpg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-section"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>The utility classes like .text-center work great too.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><div class="row small-up-1 medium-up-3 large-up-3">
+    <div class="column">
+        <div class="card">
+            <img src="assets/img/aud-01.jpg">
+            <div class="card-section">
+                <h4>Dreams feel real</h4>
+                <p>I'm going to improvise. Listen, there's something you should know about me... about inception.</p>
+                <small>Last updated 1 minute ago</small>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <img src="assets/img/aud-02.jpg">
+            <div class="card-section">
+                <h4>Menus</h4>
+                <p>Cards play nicely with menus too! Give them a try.</p>
+                <ul class="menu simple">
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <div class="card-divider">
+                <p>Featured</p>
+            </div>
+            <div class="card-section">
+                <h4>Your title here!</h4>
+                <p>An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <img src="assets/img/aud-03.jpg">
+            <div class="card-section">
+                <h4>Buttons!</h4>
+                <p>Who doesn't love a good button? Buttons work in all of their forms too.</p>
+                <a class="button" href="#">I'm a button</a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <img src="assets/img/aud-04.jpg">
+            <div class="card-section">
+                <h4>And button groups...</h4>
+                <p>Button groups also work great!</p>
+                <div class="button-group">
+                    <a class="button">One</a>
+                    <a class="button">Two</a>
+                    <a class="button">Three</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card text-center">
+            <div class="card-divider">
+                <p>Centered</p>
+            </div>
+            <img src="assets/img/aud-01.jpg">
+            <div class="card-section">
+                <p>The utility classes like .text-center work great too.</p>
+                <a class="button" href="#">Click me</a>
+            </div>
+        </div>
+    </div>
+</div></div>
+                </section>
+                <section class="ss-section" id="colors" data-magellan-target="colors">
+                    <h1>Colors</h1><p class="lead">Below you can find the different values used for the theme.</p>
 
 <hr>
-<h2>Elements of a Form</h2><p>A form should be marked up using its default HTML properties. The ones we make use of include (in hierarchical order):</p>
-<ul>
-<li>Form</li>
-<li>Label</li>
-<li>Input</li>
-<li>Select</li>
-<li>Text area</li>
-<li>Button</li>
-</ul>
+<p><h3>Primary Colors</h3></p>
+<div class="row up-1 medium-up-3 large-up-6">
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">michigan blue</div>
+      <span style="background: #00274c;"></span>
+      #00274c
+</div>
+</div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">michigan maize</div>
+      <span style="background: #ffcb05"></span>
+      #ffcb05
+    </div>
+  </div>
+</div>
+<h3>Secondary Colors</h3>
+  <div class="row up-1 small-up-1 medium-up-3 large-up-6">
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">tappan red</div>
+      <span style="background: #9a3324"></span>
+      #9a3324
+    </div>
+  </div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">arboretum blue</div>
+      <span style="background: #407ec9"></span>
+      #407ec9
+    </div>
+  </div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">ross orange</div>
+      <span style="background: #d86018"></span>
+      #d86018
+    </div>
+  </div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">a2 amethyst</div>
+      <span style="background: #702082"></span>
+      #702082
+    </div>
+  </div>
+  </div>
+  <h3>Supporting Values</h3>
+  <div class="row up-1 small-up-1 medium-up-3 large-up-6">
+   <div class="columns">
+    <div class="color-block">
+      <div class="color-name">black 100</div>
+      <span style="background: #000"></span>
+      #000000
+    </div>
+  </div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">gray 8</div>
+      <span style="background: #202020"></span>
+      #202020
+    </div>
+  </div>
+   <div class="columns">
+    <div class="color-block">
+      <div class="color-name">gray 24</div>
+      <span style="background: #3d3d3d"></span>
+      #3d3d3d
+    </div>
+  </div>
+   <div class="columns">
+    <div class="color-block">
+      <div class="color-name">gray 54</div>
+      <span style="background: #8a8a8a"></span>
+      #8a8a8a
+    </div>
+  </div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">gray 77</div>
+      <span style="background: #c4c4c4"></span>
+      #c4c4c4
+    </div>
+  </div>
+   <div class="columns">
+    <div class="color-block">
+      <div class="color-name">gray 93</div>
+      <span style="background: #ededed"></span>
+      #ededed
+    </div>
+  </div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">gray 98</div>
+      <span style="background: #fafafa"></span>
+      #fafafa
+    </div>
+  </div>
+  <div class="columns">
+    <div class="color-block">
+      <div class="color-name">white 100</div>
+      <span style="background: #fff"></span>
+      #ffffff
+    </div>
+  </div>
+</div>
+
+
+<p>--</p>
+<h3>Contrast</h3><p>We must conform to WCAG AA. Use <a href="https://webaim.org/resources/contrastchecker/" target="_blank">this contrast checker</a> when using custom color combinations in the WYSIWYG.</p>
+
+                </section>
+                <section class="ss-section" id="the-grid" data-magellan-target="the-grid">
+                    <h1>The Grid</h1><p class="lead">This is just an explanation of the grid we&#39;re using. Most likely you won&#39;t need to add it to any page templates. The Grid is powered by Flexbox. For more in-depth details regarding The Grid, please see <a href="https://foundation.zurb.com/sites/docs/flex-grid.html">Foundation&#39;s documentation</a>.</p>
+
 <hr>
-<h2>How to Use</h2><p>Make forms great and easy to use with the following rules:</p>
-<ul>
-<li>Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the for, name, and id attributes for all applicable elements.</li>
-<li>Series of checkboxes and radio buttons below within a <code>&lt;ul class=&quot;inline-list&quot;&gt;</code>.</li>
-<li>Before selecting any set of fields to use for a required input, explore other options (e.g., radio buttons over select lists).</li>
-</ul>
+<h3>Overview</h3><p>The grid is built around two key elements: row and columns. <code>.row</code> creates a max-width and contain the grid, and <code>.columns</code> create the final structure. Everything on your page that you don&#39;t give a specific structural style to should be within a row or columns.</p>
 <hr>
-<h2>Learn All About Forms</h2><p>Check out the <a href="http://foundation.zurb.com/sites/docs">Foundation Docs</a> to learn about how flexible our forms are for creating different layouts. It works perfectly with the grid to meet all your form needs.</p>
+<h3>Details on Gutters, Margins, and Padding</h3><p>Here are the <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="A scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). SassScript is the scripting language itself.">SASS</span> variables regarding the maximum width of the theme, breakpoints, columns, and block grid.</p>
+<div class="ss-code"><pre><code class="html">$global-width: rem-calc(1300);
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1300px,
+  xxlarge: 1440px,
+);
+$breakpoint-classes: (small medium large xlarge xxlarge);
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: 'columns';
+$block-grid-max: 8;</code></pre></div><hr>
+<h3>Nesting</h3><p>In the Grid you can nest columnss down as far as you&#39;d like. Just embed row inside columnss and go from there. Each embedded row can contain up to 12 columnss.</p>
 <hr>
-<h2>Form Layouts</h2><p>Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:</p>
-<ul>
-<li>You can size inputs using column sizes, like <code>.medium-6</code>, <code>.small-6</code>.</li>
-<li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
-</ul>
+<h3>How to Use</h3><p>Using this framework is easy. Here&#39;s how your code will look when you use a series of <code>&lt;div&gt;</code> tags to create columnss.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-4 large-3 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-6 medium-8 large-9 columns"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-12 large-4 columns">4</div>
+<div class="small-12 large-4 columns">4</div>
+<div class="small-12 large-4 columns">4</div>
+</div>
+<div class="row display">
+  <div class="small-12 large-3 columns">3</div>
+  <div class="small-12 large-6 columns">6</div>
+  <div class="small-12 large-3 columns">3</div>
+</div>
+<div class="row display">
+  <div class="small-12 large-2 columns">2</div>
+  <div class="small-12 large-8 columns">8</div>
+  <div class="small-12 large-2 columns">2</div>
+</div>
+<div class="row display">
+  <div class="small-12 large-3 columns">3</div>
+  <div class="small-12 large-9 columns">9</div>
+</div>
+<div class="row display">
+  <div class="small-12 large-4 columns">4</div>
+  <div class="small-12 large-8 columns">8</div>
+</div>
+<div class="row display">
+  <div class="small-12 large-5 columns">5</div>
+  <div class="small-12 large-7 columns">7</div>
+</div>
+<div class="row display">
+  <div class="small-12 large-6 columns">6</div>
+  <div class="small-12 large-6 columns">6</div>
+</div>
+
 <hr>
-<h2>Form Example</h2><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row collapse"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group-field"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group-label"</span>&gt;</span>.com<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<h3>Nesting row</h3><p>In the Grid you can nest columnss down as far as you&#39;d like. Just embed row inside columnss and go from there. Each embedded row can contain up to 12 columnss.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 columns"</span>&gt;</span>8
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 columns"</span>&gt;</span>8 Nested
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-8 columns"</span>&gt;</span>8 Nested Again<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 columns"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 columns"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Select Box<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"good"</span>&gt;</span>Good<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"better"</span>&gt;</span>Better<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"best"</span>&gt;</span>Best<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Choose Your Favorite<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"radio1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"radio1"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio1"</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"radio2"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"radio2"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio2"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Check these out<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox1"</span>&gt;</span>Checkbox 1<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox2"</span>&gt;</span>Checkbox 2<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Textarea Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre></div>
-
-<div class="ss-code-live"><form>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-4 columns"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-8 columns">8
+    <div class="row align-center display">
+      <div class="small-8 columns">8 Nested
+        <div class="row align-center display">
+          <div class="small-8 columns">8 Nested Again</div>
+<div class="small-4 columns">4</div>
+</div>
+      </div>
+      <div class="small-4 columns">4</div>
     </div>
   </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Label</label>
-      <input type="text" placeholder="placeholder">
-    </div>
-    <div class="large-6 columns">
-      <div class="row collapse">
-        <label>Label</label>
-        <div class="input-group">
-          <input class="input-group-field" type="text" placeholder="placeholder">
-          <span class="input-group-label">.com</span>
+  <div class="small-4 columns">4</div>
+</div>
+
+<hr>
+<h3>Small Grid</h3><p>As you&#39;ve probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-2 columns"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-10 columns"</span>&gt;</span>10, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-3 columns"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"small-9 columns"</span>&gt;</span>9, last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="row display">
+  <div class="small-2 columns">2</div>
+  <div class="small-10 columns">10, last</div>
+</div>
+<div class="row display">
+  <div class="small-3 columns">3</div>
+  <div class="small-9 columns">9, last</div>
+</div>
+                </section>
+                <section class="ss-section" id="iconography" data-magellan-target="iconography">
+                    <h1>Iconography</h1><p class="lead">This theme uses a combination of <a href="http://fontawesome.io/cheatsheet/">Font Awesome</a> icon fonts and custom SVGs.</p>
+
+<h3>Font Awesome</h3><div class="icon-fonts"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>  <i class="fa fa-instagram fa-lg" aria-hidden="true"></i> <i class="fa fa-flickr fa-lg" aria-hidden="true"></i> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> <i class="fa fa-youtube fa-lg" aria-hidden="true"></i> <i class="fa fa-snapchat-ghost fa-lg" aria-hidden="true"></i> <i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></div>
+<div class="icon-fonts"><i class="fa fa-caret-left fa-lg" aria-hidden="true"></i> <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i> <i class="fa fa-angle-double-left fa-lg" aria-hidden="true"></i> <i class="fa fa-angle-double-right fa-lg" aria-hidden="true"></i> <i class="fa fa-external-link" aria-hidden="true"></i> <i class="fa fa-envelope-o" aria-hidden="true"></i> <i class="fa fa-close" aria-hidden="true"></i> <i class="fa fa-camera" aria-hidden="true"></i>
+</div>
+
+
+<hr>
+<h3>SVGs</h3><p>We&#39;re currently offering a limited number, but will add more on an as-needed basis.</p>
+<div class="row small-up-3 large-up-8 text-center">
+    <div class="icon column">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
         </div>
-      </div>
+        <div class="word">Award</div>
     </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Select Box</label>
-      <select>
-        <option value="good">Good</option>
-        <option value="better">Better</option>
-        <option value="best">Best</option>
-      </select>
+    <div class="icon column">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+        </div>
+        <div class="word">Globe</div>
     </div>
-  </div>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
-      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
+    <div class="icon column">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+        </div>
+        <div class="word">Briefcase</div>
     </div>
-    <div class="large-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+    <div class="icon column">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+        </div>
+        <div class="word">Eye</div>
     </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Textarea Label</label>
-      <textarea placeholder="placeholder"></textarea>
+    <div class="icon column">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-rain">
+                <line x1="16" y1="13" x2="16" y2="21"></line>
+                <line x1="8" y1="13" x2="8" y2="21"></line>
+                <line x1="12" y1="15" x2="12" y2="23"></line>
+                <path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path>
+            </svg>
+        </div>
+        <div class="word">Rain cloud</div>
     </div>
-  </div>
-</form></div>
-          </section>
-          <section class="ss-section" id="new-section">
-            <h1>New Section</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid <strong>expedita!</strong> <a href="zurb.com">Non dicta</a>, autem obcaecati error, id ab voluptate unde culpa nulla.</p>
-<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div>
+    <div class="icon column">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+            </svg>
+        </div>
+        <div class="word">CPU</div>
+    </div>
+    <div class="icon column">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+        </div>
+        <div class="word">Users</div>
+    </div>
+</div>
+                </section>
+                <section class="ss-section" id="images" data-magellan-target="images">
+                    <h1>Images</h1><p class="lead">Images appear on the site in four different aspect ratios: 20:9, 3:2, 3:4, and 1:1.</p>
 
-<div class="ss-code-live"><a href="#" class="button">Button</a>
-<a href="#" class="button">Button</a>
-<a href="#" class="button">Button</a></div>
-          </section>
-      </div>
 
-    </div></div>
+<h3>Large featured image (for sliders or pages)</h3><div class="image">
+  <img src="assets/img/orbit-bg-2.jpg" alt="">
+  <span class="secondary label overlay">16:9 ratio, 2830 × 1274 pixels upload size</span>
+</div>
 
+<hr>
+<h3>Card images</h3><div class="image">
+  <img src="assets/img/aud-01.jpg" alt="">
+  <span class="secondary label overlay">3:2 ratio, 1200 × 800 pixels upload size</span>
+</div>
+
+<hr>
+<h3>Statistics and promo images</h3><p class="lead">The theme will take care of the border radius, no need to create it in a photo editor.</p>
+
+<div class="image">
+  <img src="assets/img/stats.jpg" alt="">
+  <span class="secondary label overlay">1:1 ratio, 600 × 600 pixels upload size</span>
+</div>
+
+<hr>
+<h3>Research row images</h3><div class="image">
+  <img src="assets/img/research-img-02.jpg" alt="">
+  <span class="secondary label overlay">3:4 ratio, 1278 × 1500 pixels upload size</span>
+</div>
+
+<hr>
+<h2>Image treatments</h2><p class="lead">The theme will take care of the duotones. Within certain fields in the backend, you will have a selection of duotones you can use over uploaded images. Please note that not every image will work. Use your best judgement on what works and does not. However, desaturated images tend to work best with duotones.</p>
+
+<div class="row collapse small-up-1 medium-up-3 large-up-3">
+    <div class="image duotones columns">
+        <div class="blue-duotone" style="background-image: url('assets/img/duotone-src.jpg');"></div>
+        <span class="secondary label overlay">Blue Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="dark-blue-duotone" style="background-image: url('assets/img/duotone-src.jpg');"></div>
+        <span class="secondary label overlay">Dark Blue Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="red-duotone" style="background-image: url('assets/img/duotone-src.jpg');">asdf</div>
+        <span class="secondary label overlay">Red Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="yellow-duotone" style="background-image: url('assets/img/duotone-src.jpg');">asdf</div>
+        <span class="secondary label overlay">Yellow Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="purple-duotone" style="background-image: url('assets/img/duotone-src.jpg');">asdf</div>
+        <span class="secondary label overlay">Purple Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="green-duotone" style="background-image: url('assets/img/duotone-src.jpg');">asdf</div>
+        <span class="secondary label overlay">Green Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="orange-duotone" style="background-image: url('assets/img/duotone-src.jpg');">asdf</div>
+        <span class="secondary label overlay">Orange Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="blend-red-blue-dark" style="background-image: url('assets/img/duotone-src.jpg');">asdf</div>
+        <span class="secondary label overlay">Blue Red Blend Duotone</span>
+    </div>
+    <div class="image duotones columns">
+        <div class="blend-blue-yellow-light" style="background-image: url('assets/img/duotone-src.jpg');">asdf</div>
+        <span class="secondary label overlay">Yellow Blue Blend Duotone</span>
+    </div>
+</div>
+                </section>
+                <section class="ss-section" id="labels" data-magellan-target="labels">
+                    <h1>Labels</h1><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"secondary label"</span>&gt;</span>Secondary Label<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"success label"</span>&gt;</span>Success Label<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"alert label"</span>&gt;</span>Alert Label<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"warning label"</span>&gt;</span>Warning Label<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><span class="secondary label">Secondary Label</span>
+<span class="success label">Success Label</span>
+<span class="alert label">Alert Label</span>
+<span class="warning label">Warning Label</span></div>
+                </section>
+                <section class="ss-section" id="links" data-magellan-target="links">
+                    <h1>Links</h1><p><p class="lead"><a href="#">Internal links</a> and <a href="#" target="_blank">external links</a> get their own treatments. Adding the <code>target=&quot;_blank&quot;</code> attribute will trigger the theme to place an indicator at the end of the link.</p></p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Internal links<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>External links<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div>
+                </section>
+                <section class="ss-section" id="tooltips" data-magellan-target="tooltips">
+                    <h1>Tooltips</h1><p class="lead">Tooltips are for displaying extended information for a term or action on a page.</p>
+
+<p>The <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Fancy word for a beetle.">scarabaeus</span> hung quite clear of any branches, and, if allowed to fall, would have fallen at our feet. Legrand immediately took the scythe, and cleared with it a circular space, three or four yards in diameter, just beneath the insect, and, having accomplished this, ordered Jupiter to let go the string and come down from the tree.</p>
+<p>By default, clicking on a tooltip will leave it open until you click somewhere else. However, you can disable that by adding <code>data-click-open=&quot;false&quot;</code></p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+this
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">data-tooltip</span> <span class="hljs-attribute">aria-haspopup</span>=<span class="hljs-value">"true"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"has-tip top"</span> <span class="hljs-attribute">data-disable-hover</span>=<span class="hljs-value">"false"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"2"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"You see?  I'm open!"</span>&gt;</span>tooltip will stay open<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+while
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">data-tooltip</span> <span class="hljs-attribute">aria-haspopup</span>=<span class="hljs-value">"true"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"has-tip top"</span> <span class="hljs-attribute">data-click-open</span>=<span class="hljs-value">"false"</span> <span class="hljs-attribute">data-disable-hover</span>=<span class="hljs-value">"false"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"2"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"I don't stay open"</span>&gt;</span>this one will only be open when hovered<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><p>
+this
+<span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex="2" title="You see?  I'm open!">tooltip will stay open</span>
+
+while
+<span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="false" data-disable-hover="false" tabindex="2" title="I don't stay open">this one will only be open when hovered</span>
+</p></div><p>You can also position the tooltips to the right and left of the word by adding the classes <code>.right</code> or <code>.left</code> to the <code>&lt;span&gt;</code> element.</p>
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">data-tooltip</span> <span class="hljs-attribute">aria-haspopup</span>=<span class="hljs-value">"true"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"has-tip right"</span> <span class="hljs-attribute">data-disable-hover</span>=<span class="hljs-value">"false"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"3"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Yes."</span>&gt;</span>Do androids dream of electric sheep?<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">data-tooltip</span> <span class="hljs-attribute">aria-haspopup</span>=<span class="hljs-value">"true"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"has-tip left"</span> <span class="hljs-attribute">data-disable-hover</span>=<span class="hljs-value">"false"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"4"</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"Star"</span>&gt;</span>Wars<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> onec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><p>
+Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna.
+<span data-tooltip aria-haspopup="true" class="has-tip right" data-disable-hover="false" tabindex="3" title="Yes.">Do androids dream of electric sheep?</span> Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+<span data-tooltip aria-haspopup="true" class="has-tip left" data-disable-hover="false" tabindex="4" title="Star">Wars</span> onec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod.</p></div>
+                </section>
+                <section class="ss-section" id="tables" data-magellan-target="tables">
+                    <h1>Tables</h1><p class="lead">To stack a table on small screens, add the class <code>.stack</code>. Add the class <code>.hover</code> to lightly darken the table rows on hover.</p>
+
+<div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hover stack"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"200"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"150"</span>&gt;</span>Table Header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer content Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Content Goes Here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></code></pre></div>
+
+<div class="ss-code-live"><table class="hover stack">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+      </tr>
+  </tbody>
+</table></div>
+                </section>
+                <section class="ss-section" id="typography" data-magellan-target="typography">
+                    <h1>Typography</h1><p class="lead">This design uses <a href="https://fonts.google.com/specimen/Pathway+Gothic+One" target="_blank">Pathway Gothic One</a> for super-headings, <a href="https://fonts.google.com/specimen/Montserrat" target="_blank">Montserrat</a> for headings and subheadings, and <a href="https://fonts.google.com/specimen/Cardo" target="_blank">Cardo</a> paragraph text.  Base type is set at 100%(16 px).</p>
+
+<hr>
+<h3>Headings</h3><p>Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest). Whenever possible try not to skip heading levels.</p>
+<h4>Header Styles</h4><p>The theme includes two typographic scales—one uses a narrow range of sizes for small-sized screens, and the other uses a wider range of sizes for medium- and larger-sized screens.</p>
+<div class="ss-code"><pre><code class="html">small: (
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
+  ),
+  medium: (
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
+)</code></pre></div><h1 class="super-headings">Super Heading h1</h1>
+
+<h2 class="super-headings">Super Heading h2</h2>
+
+<h3 class="super-headings">Super Heading h3</h3>
+
+<h4 class="super-headings">Super Heading h4</h4>
+
+<h5 class="super-headings">Super Heading h5</h5>
+
+<h6 class="super-headings">Super Heading h6</h6>
+
+<hr>
+<h1>Heading h1</h1>
+
+<h2>Heading h2</h2>
+
+<h3>Heading h3</h3>
+
+<h4>Heading h4</h4>
+
+<h5>Heading h5</h5>
+
+<h6>Heading h6</h6>
+
+<hr>
+<h3>Paragraphs</h3><p>Paragraphs are groups of sentences, each with a lead (first sentence) and transition (last sentence). They are block level elements, meaning they stack vertically when repeated. Use them as such. Line heights are set at 1.6 times the font size. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<hr>
+<h3>Eyebrows</h3><p class="lead">Eyebrows appear atop headlines in certain cases. They usually denote a category the item appears in.</p>
+
+<div class="hed">
+  <div class="eyebrow">Eyebrow</div>
+  <h3>This is a headline</h3>
+</div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="row expanded align-center text-center">
+        <div class="small-12 medium-2 large-2 columns">
+            <a class="logo" href="/index.html"><img src="assets/img/CoE-block-m.svg" alt="College of Engineering | University of Michigan"></a>
+        </div>
+    </footer>
     <script src="assets/js/app.js"></script>
-  </body>
+</body>
+
 </html>
