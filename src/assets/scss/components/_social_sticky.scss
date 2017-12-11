@@ -7,6 +7,7 @@
 .social_sticky {
     position: fixed;
     clear: both;
+    display: none;
     top: 50%;
     left: 0;
     transform: translate(0%, -50%);
@@ -19,7 +20,7 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.02);
     opacity: .9;
     transition: all .1s ease-in-out;
-    @include breakpoint(large down) {
+    @include breakpoint(1365px) {
         top: inherit;
         left: 50%;
         bottom: 0;
@@ -37,10 +38,10 @@
         &.headroom {
             will-change: transform;
             transition: transform 200ms ease-in-out;
-            &--pinned {
+            &.socialDown {
                 transform: translate(-50%, 0%);
             }
-            &--unpinned {
+            &.socialUp {
                 transform: translate(-50%, 100%);
             }
         }
@@ -84,11 +85,11 @@
         z-index: -999;
     }
     .menu {
-        display: block;
+        // display: block;
         transition: all .2s ease-in-out;
-        @include breakpoint(large down) {
-            display: table;
-        }
+        // @include breakpoint(large down) {
+        //     display: table;
+        // }
         li {
             &.title {
                 font-family: 'Open Sans';
@@ -134,7 +135,7 @@
                     color: $a2-amethyst;
                 }
             }
-            @include breakpoint(large down) {
+            @include breakpoint(1365px) {
                 float: left;
             }
         }
