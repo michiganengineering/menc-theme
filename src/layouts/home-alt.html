@@ -1,0 +1,66 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!--
+    __  ____      __    _                      ______            _                      _            
+   /  |/  (_)____/ /_  (_)___ _____ _____     / ____/___  ____ _(_)___  ___  ___  _____(_)___  ____ _
+  / /|_/ / / ___/ __ \/ / __ `/ __ `/ __ \   / __/ / __ \/ __ `/ / __ \/ _ \/ _ \/ ___/ / __ \/ __ `/
+ / /  / / / /__/ / / / / /_/ / /_/ / / / /  / /___/ / / / /_/ / / / / /  __/  __/ /  / / / / / /_/ / 
+/_/  /_/_/\___/_/ /_/_/\__, /\__,_/_/ /_/  /_____/_/ /_/\__, /_/_/ /_/\___/\___/_/  /_/_/ /_/\__, /  
+                      /____/                           /____/                               /____/   
+-->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{keywords}}">
+    <link rel="author" href="{{author}}" />
+    <link rel="canonical" href="{{page}}" /> {{!-- Facebook Meta --}}
+    <meta property="og:url" content="{{page}}">
+    <meta property="og:image" content="{{root}}assets/img/og-img.png">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:site_name" content="{{siteTitle}}">
+    <meta property="og:see_also" content="{{root}}"> {{!-- Google+ Meta --}}
+    <meta itemprop="name" content="{{ title }}">
+    <meta itemprop="description" content="{{ description }}">
+    <meta itemprop="image" content="{{root}}assets/img/og-img.png"> {{!-- Twitter Meta --}}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{page}}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{root}}assets/img/og-img.png"> {{!-- Icons --}}
+    <link rel="icon" href="{{root}}assets/img/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{root}}assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{root}}assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{root}}assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{root}}assets/img/icons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="{{root}}assets/img/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{root}}assets/img/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{root}}assets/img/icons/manifest.json">
+    <link rel="mask-icon" href="{{root}}assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#00274c">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <script src="https://use.fontawesome.com/771dfba98b.js"></script>
+</head>
+
+<body {{#ifpage 'category--features'}} class="features" {{/ifpage}}>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> navigation}} {{> body}} {{> footer}}
+    <div class="scroll-top-wrapper">
+        <span class="scroll-top-inner"><span class="fa-stack fa-lg"><i class="fa fa-2x fa-angle-up fa-inverse"></i><i class="fa fa-circle fa-stack-2x"></i></span></span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.js"></script>
+    <script src="{{root}}assets/js/app.js"></script>
+    {{#ifpage 'article--standard'}}<script src="{{root}}assets/js/single.js"></script>{{/ifpage}}
+    {{#ifpage 'article--short'}}<script src="{{root}}assets/js/single.js"></script>{{/ifpage}}
+    {{#ifpage 'article--standard_long'}}<script src="{{root}}assets/js/single.js"></script>{{/ifpage}}
+    {{#ifpage 'article--standard-callouts'}}<script src="{{root}}assets/js/single.js"></script>{{/ifpage}}
+    {{#ifpage 'article--ait2html'}}<script src="{{root}}assets/js/single.js"></script>{{/ifpage}}
+
+</body>
+
+</html>
