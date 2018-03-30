@@ -213,8 +213,8 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Open Sans';
-$super-header-font-family: 'bebas_neuebold';
+$header-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$super-header-font-family: 'bebas_neuebold', Helvetica, Arial, sans-serif;
 $header-font-weight: 900;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

@@ -12,12 +12,12 @@
     }
     border-bottom: 1px solid $lighter-gray;
     .time_label {
-        font-family: 'Open Sans';
+        font-family: $header-font-family;
         font-size: .85rem;
         font-weight: 700;
     }
     .trending_topics {
-        font-family: 'Open Sans';
+        font-family: $header-font-family;
         font-size: .75rem;
         margin: 0 0 3rem 0;
         background-color: $lightest-gray;
@@ -46,7 +46,7 @@
             }
         }
         .trending_topics_title {
-            font-family: 'bebas_neuebold';
+            font-family: $super-header-font-family;
             color: $white;
             background-color: $arboretum-blue;
             @include breakpoint(small only) {
@@ -118,7 +118,7 @@
                 }
             }
             .hed {
-                font-family: 'bebas_neuebold';
+                font-family: $super-header-font-family;
                 font-size: 3.75rem;
                 line-height: 1;
                 margin: 0;
@@ -126,7 +126,7 @@
                     font-size: 2.75rem;
                 }
                 @include breakpoint(small only) {
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-weight: 900;
                     font-size: 1.75rem;
                     margin-top: 1rem;
@@ -152,7 +152,7 @@
                     }
                 }
                 .hed {
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-weight: 900;
                     font-size: 1.75rem;
                     margin-top: 1rem;
@@ -170,7 +170,7 @@
         .column {
             .section_title {
                 color: $white;
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: 1rem;
                 font-weight: 900;
                 text-transform: uppercase;
@@ -275,7 +275,7 @@
             .article_eyebrow,
             .article_byline {
                 color: $black-54;
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: .7rem;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -285,7 +285,7 @@
                 }
             }
             .article_hed {
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: 1.125rem;
                 font-weight: 900;
             }
@@ -307,7 +307,7 @@
         .sub_article {
             .article_eyebrow,
             .article_byline {
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: .7rem;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -318,7 +318,7 @@
             }
         }
         .article_hed {
-            font-family: 'Open Sans';
+            font-family: $header-font-family;
             font-size: 1.125rem;
             font-weight: 900;
         }
@@ -369,6 +369,76 @@
             }
         }
         .history_section {
+            .orbit {
+                text-shadow: none;
+                margin-bottom: 1.5rem;
+                .gallery_title {
+                    font-family: 'bebas_neuebold';
+                    font-size: 2rem;
+                    background-color: $black-100;
+                    color: $white-87;
+                    padding-left: .625rem;
+                }
+                .orbit-container {
+                    background-color: $black-100;
+                    li.orbit-slide {
+                        img.orbit-image {
+                            width: auto;
+                        }
+                        .button {
+                            display: none;
+                            @include breakpoint(small only) {
+                                display: block;
+                                position: absolute;
+                                background-color: rgba($black, .7);
+                            }
+                        }
+                    }
+                    .orbit-caption {
+                        color: $white;
+                        background-color: $black-100;
+                        position: static;
+                        .hed {
+                            font-family: 'bebas_neuebold';
+                            font-size: 3rem;
+                            line-height: 1;
+                            @include breakpoint(small only) {
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .dek {
+                            @include breakpoint(small only) {
+                                font-size: .85rem;
+                            }
+                        }
+                        @include breakpoint(small only) {
+                            opacity: 0;
+                            position: absolute;
+                            background: rgba($black, .8) !important;
+                            transition: opacity .2s ease;
+                        }
+                    }
+                }
+                .orbit-bullets {
+                    background-color: $black-100;
+                    margin-top: 0;
+                    padding: .5rem 0;
+                    position: static;
+                    button {
+                        width: .75rem;
+                        height: .75rem;
+                        margin: 0.25rem;
+                        background-color: $white-24;
+                        &.is-active {
+                            background-color: $michigan-maize;
+                        }
+                        &:hover {
+                            background-color: $tappan-red;
+                            transition: all .3s ease-in-out;
+                        }
+                    }
+                }
+            }
             color: $white;
             .history_articles {
                 background-color: $black-87;
@@ -382,7 +452,7 @@
                 }
                 .section_tag {
                     background-color: $black-87;
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-weight: 900;
                     font-size: 1.1rem;
                     text-transform: uppercase;
@@ -421,7 +491,7 @@
                         }
                     }
                     .hed {
-                        font-family: 'Open Sans';
+                        font-family: $header-font-family;
                         font-weight: 900;
                         font-size: 1.4rem;
                     }
@@ -450,7 +520,7 @@
             }
             .section_tag {
                 background-color: $arboretum-blue;
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-weight: 900;
                 font-size: 1.1rem;
                 text-transform: uppercase;
@@ -460,7 +530,7 @@
             .photo_cta {
                 a {
                     color: $black;
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-weight: 900;
                     text-transform: uppercase;
                     &:hover {
@@ -492,7 +562,7 @@
                     }
                 }
                 .hed {
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-weight: 700;
                     font-size: 1.25rem;
                 }
@@ -517,7 +587,7 @@
             }
             .cta {
                 p {
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-size: .9rem;
                     font-weight: 400;
                     color: $white;
@@ -539,7 +609,7 @@
             }
         }
         .section_tag {
-            font-family: 'Open Sans';
+            font-family: $header-font-family;
             font-size: 1.125rem;
             font-weight: 900;
             text-transform: uppercase;
@@ -554,14 +624,14 @@
             }
             margin-top: 1.5rem;
             .eyebrow {
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: .875rem;
                 font-weight: 400;
                 color: $lightest-gray;
                 text-transform: uppercase;
             }
             .hed {
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: 1.75rem;
                 font-weight: 900;
                 margin-bottom: 1rem;
@@ -571,7 +641,7 @@
             }
             .cta {
                 p {
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-size: .9rem;
                     font-weight: 400;
                     color: $michigan-maize;
@@ -609,12 +679,12 @@
     }
     border-bottom: 1px solid $lighter-gray;
     .time_label {
-        font-family: 'Open Sans';
+        font-family: $header-font-family;
         font-size: .85rem;
         font-weight: 700;
     }
     .trending_topics {
-        font-family: 'Open Sans';
+        font-family: $header-font-family;
         font-size: .75rem;
         margin: 0 0 3rem 0;
         background-color: $lightest-gray;
@@ -643,7 +713,7 @@
             }
         }
         .trending_topics_title {
-            font-family: 'bebas_neuebold';
+            font-family: $super-header-font-family;
             color: $white;
             background-color: $arboretum-blue;
             @include breakpoint(small only) {
@@ -707,7 +777,7 @@
                 transform: translate(-50%, -5%)
             }
             .hed {
-                font-family: 'bebas_neuebold';
+                font-family: $super-header-font-family;
                 font-size: 3.75rem;
                 line-height: 1;
                 margin: 0;
@@ -715,7 +785,7 @@
                     font-size: 2.75rem;
                 }
                 @include breakpoint(small only) {
-                    font-family: 'Open Sans';
+                    font-family: $header-font-family;
                     font-weight: 900;
                     font-size: 1.75rem;
                     margin-top: 1rem;
@@ -725,60 +795,146 @@
         .secondary_articles {
             .storybox {
                 .container {
-                    padding: 1.125rem;
-                    border-bottom: 2px solid $black;
-                    background-color: $darker-gray;
                     color: $white;
-                    .in_the_news {
+                    .news_block {
+                        padding: 1.125rem;
+                        background-color: $darker-gray;
                         .section_title {
-                            font-family: 'Open Sans';
-                            font-size: 1.25rem;
-                            font-weight: 900;
-                            text-transform: uppercase;
-                            width: 100%;
-                            margin-bottom: 1rem;
-                            a {
+                            span {
+                                font-family: $header-font-family;
+                                font-size: 1.25rem;
+                                font-weight: 900;
+                                text-transform: uppercase;
+                                margin-bottom: 1rem;
                                 padding: .25rem .5rem;
                                 color: $white;
                                 display: inline-block;
                                 transition: all .2s ease;
                                 border: 2px solid $white;
-                                background-color: transparent;
+                            }
+                        }
+                        .big_item {
+                            margin-bottom: 2.5rem;
+                        }
+                        .text_block {
+                            padding: 0 1rem;
+                            a {
+                                color: $white;
                                 &:hover {
-                                    background-color: $michigan-maize;
-                                    color: $darker-gray;
-                                    border: 2px solid $michigan-maize;
+                                    color: $michigan-maize;
+                                }
+                            }
+                            .cta {
+                                a {
+                                    font-family: $header-font-family;
+                                    font-weight: 800;
+                                    color: $michigan-maize;
+                                    padding-bottom: .125rem;
+                                    border-bottom: 1px solid $michigan-maize;
+                                    transition: all .2s ease;
+                                    position: relative;
+                                    z-index: 99;
+                                    &:after {
+                                        content: '';
+                                        background-color: transparent;
+                                        width: 100%;
+                                        height: 0;
+                                        display: inline;
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 0;
+                                        transition: all .2s ease;
+                                        z-index: -1;
+                                    }
+                                    &:hover {
+                                        color: light($michigan-maize, 33.333%);
+                                        border-bottom: 1px solid rgba($ross-orange, .5);
+                                        &:after {
+                                            background-color: rgba($ross-orange, .25);
+                                            height: 50%;
+                                        }
+                                    }
                                 }
                             }
                         }
-                        hr {
-                            margin-bottom: 1rem;
+                        .secondary_items {
+                            .column {
+                                padding-top: 1.25rem;
+                                border-top: 1px solid $dark-gray;
+                            }
                         }
-                        .article_link {
-                            display: block;
-                            color: $white;
-                            border-bottom: 1px dashed $light-gray;
-                            margin-bottom: 1rem;
-                            padding-bottom: 0;
-                            &:after {
-                                background-color: $michigan-maize;
-                            }
-                            &:hover {
-                                color: $michigan-maize;
-                            }
-                            &::last-child {
-                                border-bottom: 0;
-                            }
-                            .article_eyebrow,
-                            .article_byline {
-                                color: $michigan-maize;
-                                font-family: 'Open Sans';
-                                font-size: .7rem;
-                                font-weight: 400;
+                    }
+                    .in_the_news_block {
+                        padding: 1.25rem;
+                        background-color: $black;
+                        .in_the_news {
+                            .section_title {
+                                font-family: $header-font-family;
+                                font-size: 1.25rem;
+                                font-weight: 900;
                                 text-transform: uppercase;
-                                .fa-ellipsis-v {
-                                    font-size: .65rem;
-                                    margin: 0 .25rem;
+                                width: 100%;
+                                margin-bottom: 1rem;
+                                a {
+                                    padding: .25rem .5rem;
+                                    color: $white;
+                                    display: inline-block;
+                                    transition: all .3s ease;
+                                    border-left: 2px solid $white;
+                                    position: relative;
+                                    z-index: 99;
+                                    &:after {
+                                        content: '';
+                                        background-color: transparent;
+                                        width: 0;
+                                        height: 100%;
+                                        display: inline;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        transition: all .3s ease;
+                                        z-index: -1;
+                                    }
+                                    &:hover {
+                                        color: $darker-gray;
+                                        border-left: 2px solid $michigan-maize;
+                                        &:after {
+                                            width: 100%;
+                                            background-color: $michigan-maize;
+                                            z-index: -1;
+                                        }
+                                    }
+                                }
+                            }
+                            hr {
+                                margin-bottom: 1rem;
+                            }
+                            .article_link {
+                                display: block;
+                                color: $white;
+                                border-bottom: 1px dashed $light-gray;
+                                margin-bottom: 1rem;
+                                padding-bottom: 0;
+                                &:after {
+                                    background-color: $michigan-maize;
+                                }
+                                &:hover {
+                                    color: $michigan-maize;
+                                }
+                                &::last-child {
+                                    border-bottom: 0;
+                                }
+                                .article_eyebrow,
+                                .article_byline {
+                                    color: $michigan-maize;
+                                    font-family: $header-font-family;
+                                    font-size: .7rem;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                    .fa-ellipsis-v {
+                                        font-size: .65rem;
+                                        margin: 0 .25rem;
+                                    }
                                 }
                             }
                         }
@@ -791,7 +947,7 @@
         .column {
             .section_title {
                 color: $white;
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: 1rem;
                 font-weight: 900;
                 text-transform: uppercase;
@@ -896,7 +1052,7 @@
             .article_eyebrow,
             .article_byline {
                 color: $black-54;
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: .7rem;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -906,7 +1062,7 @@
                 }
             }
             .article_hed {
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: 1.125rem;
                 font-weight: 900;
             }
@@ -928,7 +1084,7 @@
         .sub_article {
             .article_eyebrow,
             .article_byline {
-                font-family: 'Open Sans';
+                font-family: $header-font-family;
                 font-size: .7rem;
                 font-weight: 400;
                 text-transform: uppercase;
@@ -939,7 +1095,7 @@
             }
         }
         .article_hed {
-            font-family: 'Open Sans';
+            font-family: $header-font-family;
             font-size: 1.125rem;
             font-weight: 900;
         }
