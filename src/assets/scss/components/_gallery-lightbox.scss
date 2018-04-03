@@ -1,0 +1,78 @@
+.gallery-lightbox {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $black-100;
+    z-index: 9999;
+    .gallery-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 10vw;
+        top: 10vh;
+        width: 80vw;
+        height: 70vh;
+        .gallery-button-close {
+            color: $white;
+            font-size: 3.125rem;
+            position: absolute;
+            right: -50px;
+            top: -50px;
+            border: 0;
+            background-color: transparent;
+            transform: rotate(45deg);
+        }
+        .gallery-button-previous {
+            color: $white;
+            font-size: 3.125rem;
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translate(0, -50%);
+            border: 0;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+        }
+        .gallery-button-next {
+            color: $white;
+            font-size: 3.125rem;
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translate(0, -50%);
+            border: 0;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+        }
+        .gallery-navigation {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            display: flex;
+            bottom: -20px;
+            left: 50%;
+            transform: translate(-50%);
+            .gallery-navigation-button {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border: 0;
+                background-color: rgba(255, 255, 255, 0.4);
+                border-radius: 50%;
+                margin: 0 3px;
+                &.active {
+                    background-color: rgba(255, 255, 255, 0.95);
+                }
+            }
+        }
+    }
+}

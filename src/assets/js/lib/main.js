@@ -61,10 +61,7 @@ $(".playlist").on('click', '.video_item', function() {
     $(this).addClass("active");
 });
 
-// Immediately Invoked Function Expression
-// IIFE
-
-(function() {
+$(function() {
     var galleryLightbox = document.querySelector('.gallery-lightbox');
     var galleryItems = document.querySelectorAll('.gallery-item');
     var closeButton = document.querySelector('.gallery-button-close');
