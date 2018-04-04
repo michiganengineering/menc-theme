@@ -61,6 +61,7 @@ $(".playlist").on('click', '.video_item', function() {
     $(this).addClass("active");
 });
 
+// Gallery lightbox on index
 $(function() {
     var galleryLightbox = document.querySelector('.gallery-lightbox');
     var galleryItems = document.querySelectorAll('.gallery-item');
@@ -85,11 +86,11 @@ $(function() {
     var navItems = document.querySelectorAll('.gallery-navigation-button');
 
     function showGallery() {
-        galleryLightbox.style.display = 'block';
+        galleryLightbox.classList.add('active');
     }
 
     function hideGallery() {
-        galleryLightbox.style.display = 'none';
+        galleryLightbox.classList.remove('active');
     }
 
     function updateNavigation() {
@@ -122,7 +123,6 @@ $(function() {
     function showCaption() {
         var captionText = galleryItems[galleryItemIndex].getAttribute('gallery-image-caption');
         var galleryContent = document.querySelector('.gallery-content');
-        var oldCaption = galleryContent.querySelector('.image-caption');
 
         document.getElementById('caption').innerHTML = captionText;
     }
@@ -202,8 +202,6 @@ $(function() {
         }
     }
 
-
-
     document.body.addEventListener('keyup', onKeyUp);
 
-}());
+});

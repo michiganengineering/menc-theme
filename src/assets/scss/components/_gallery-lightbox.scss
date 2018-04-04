@@ -1,5 +1,6 @@
 .gallery-lightbox {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     left: 0;
     top: 0;
@@ -7,6 +8,12 @@
     height: 100vh;
     background-color: $black-100;
     z-index: 9999;
+    transition: opacity .2s ease-in-out;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .2s ease-in-out;
+    }
     .gallery-content {
         display: flex;
         align-items: center;
