@@ -68,12 +68,10 @@ $(function() {
     var closeButton = document.querySelector('.gallery-button-close');
     var nextButton = document.querySelector('.gallery-button-next');
     var previousButton = document.querySelector('.gallery-button-previous');
-
     var galleryItemIndex = 0;
 
     function createGalleryNavigation() {
         var navigationItemHtml = '<li class="gallery-navigation-item"><a class="gallery-navigation-button"></a></li>';
-
         var navigation = document.querySelector('.gallery-navigation');
 
         for (var i = 0; i < galleryItems.length; i++) {
@@ -103,11 +101,9 @@ $(function() {
 
     function showImage() {
         var imageUrl = galleryItems[galleryItemIndex].getAttribute('gallery-full-image');
-
         var img = document.createElement('img');
         img.src = imageUrl;
         img.className = 'openItem';
-
         var galleryContent = document.querySelector('.gallery-content');
         var oldImage = galleryContent.querySelector('img');
 
@@ -149,7 +145,6 @@ $(function() {
     }
 
     closeButton.addEventListener('click', onCloseButtonClick);
-
     function onNextButtonClick() {
         galleryItemIndex++;
         if (galleryItemIndex === galleryItems.length) {
@@ -175,7 +170,6 @@ $(function() {
 
     function onNavigationButtonClick(event) {
         var clickedNavigationItem = event.currentTarget;
-
         galleryItemIndex = getItemIndex(navItems, clickedNavigationItem);
         showImage();
         showCaption();
