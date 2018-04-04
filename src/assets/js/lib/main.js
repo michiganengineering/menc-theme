@@ -109,6 +109,7 @@ $(function() {
 
         var galleryContent = document.querySelector('.gallery-content');
         var oldImage = galleryContent.querySelector('img');
+
         if (oldImage) {
             galleryContent.removeChild(oldImage);
         }
@@ -116,6 +117,14 @@ $(function() {
         galleryContent.appendChild(img);
 
         updateNavigation();
+    }
+
+    function showCaption() {
+        var captionText = galleryItems[galleryItemIndex].getAttribute('gallery-image-caption');
+        var galleryContent = document.querySelector('.gallery-content');
+        var oldCaption = galleryContent.querySelector('.image-caption');
+
+        document.getElementById('caption').innerHTML = captionText;
     }
 
     function getItemIndex(items, item) {
@@ -128,6 +137,7 @@ $(function() {
         showGallery();
         galleryItemIndex = getItemIndex(galleryItems, clickedGalleryItem);
         showImage();
+        showCaption();
     }
 
     for (var i = 0; i < galleryItems.length; i++) {
@@ -146,6 +156,7 @@ $(function() {
             galleryItemIndex = 0;
         }
         showImage();
+        showCaption();
     }
 
     nextButton.addEventListener('click', onNextButtonClick);
@@ -157,6 +168,7 @@ $(function() {
             galleryItemIndex = galleryItems.length - 1;
         }
         showImage();
+        showCaption();
     }
 
     previousButton.addEventListener('click', onPreviousButtonClick);
@@ -166,6 +178,7 @@ $(function() {
 
         galleryItemIndex = getItemIndex(navItems, clickedNavigationItem);
         showImage();
+        showCaption();
     }
 
     for (var i = 0; i < navItems.length; i++) {
