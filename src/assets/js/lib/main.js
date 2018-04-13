@@ -145,6 +145,7 @@ $(function() {
     }
 
     closeButton.addEventListener('click', onCloseButtonClick);
+
     function onNextButtonClick() {
         galleryItemIndex++;
         if (galleryItemIndex === galleryItems.length) {
@@ -193,6 +194,15 @@ $(function() {
             //Arrow left key up
             onPreviousButtonClick();
 
+        }
+
+    }
+
+    function onKeyDown(event) {
+        if (event.which === 13) {
+            showGallery();
+            showImage();
+            showCaption();
         }
     }
 
